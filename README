@@ -1,0 +1,33 @@
+# Agent Design and Evaluation
+
+COMP 4991 Independent Study, Fall 2026 · Mallory Berg · Advisor: Dr. Sean Connin
+Working title: *Can Agents Ask the Right Questions?*
+
+## What this is
+
+A reproducible evaluation harness that scores a deliberately simple, hand-coded agent on whether it asks, answers, or abstains correctly when given natural-language data requests against a governed, synthetic data dictionary. The harness is the product. The agent is the subject under test and stays as simple as I can keep it, so that what gets measured is the measurement itself.
+
+The system: one hand-coded agent with a tool loop on the raw API, and a single-turn baseline that cannot ask as the control. No orchestration, no framework, no UI, no fine-tuning.
+
+## Status
+
+Environment: Docker Compose, target Fri Sept 18, 2026.
+
+## Where things are
+
+- `docs/` holds the study plan and definition of done. The rest of the structure grows here as it is built.
+- The shared folder holds the checkpoint documents and Friday status notes.
+- At each checkpoint, one document in the shared folder and one tag on this repository carry the same name.
+
+## Checkpoints
+
+| # | Deliverable | Due |
+|---|---|---|
+| 1 | Literature review | Fri Oct 2 |
+| 2 | Methodology write-up | Fri Oct 16 |
+| 3 | Agent and harness v1, frozen, with results table and judge validation | Fri Nov 6 |
+| 4 | Final report and presentation | Fri Nov 20 |
+
+## AI assistance
+
+I use an LLM (Claude) as a thinking partner for planning and critique. Code in this repository is mine unless a file header says otherwise; I label any AI-assisted code.
