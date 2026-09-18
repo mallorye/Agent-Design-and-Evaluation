@@ -1,0 +1,10 @@
+services:
+  db:
+    image: pgvector/pgvector:pg18
+    container_name: postgres-dev
+    environment:
+        POSTGRES_USER: senioranalyst
+        POSTGRES_DB: artificial_advancement
+        POSTGRES_PASSWORD: 1234du
+    ports:
+      - "5432:5432"
