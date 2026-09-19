@@ -8,3 +8,5 @@ services:
         POSTGRES_PASSWORD: 1234du
     ports:
       - "5432:5432"
+    volumes:
+      - ./db/init:/docker-entrypoint-initdb.d
