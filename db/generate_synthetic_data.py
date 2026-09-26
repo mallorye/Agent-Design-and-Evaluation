@@ -2,7 +2,8 @@
 # =============================================================================
 #  AI-GENERATED CODE
 #  Written by Claude Code (Anthropic; model Claude Opus 5.5) from the schema
-#  alone: db/init/01_schema.sql. No other document or dataset informed the
+# (db/init/01_schema.sql) and the spec (db/data_generation_spec.md); 
+#  no DU data or other dataset. No other document or dataset informed the
 #  data design. Every name, address, email, and amount it produces is
 #  synthetic.
 # =============================================================================
