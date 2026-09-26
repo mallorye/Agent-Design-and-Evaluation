@@ -11,7 +11,7 @@
              contact_preference       (1:N from constituent)
              constituent_relationship (self-referencing M:N on constituent)
              degree
-   
+   v1 drafted with AI assistance, subsequent changes are mine
    ============================================================================= */
 
 DROP SCHEMA IF EXISTS synth_advancement CASCADE;
