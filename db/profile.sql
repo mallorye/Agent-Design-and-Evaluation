@@ -1,0 +1,1 @@
+select * from synth_advancement.constituent

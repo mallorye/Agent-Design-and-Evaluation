@@ -1,0 +1,67 @@
+designation_code,designation_name,division,department,is_active,desgtype,areaofgiving
+01000100,University Annual Fund,University-Wide,,true,Current Unrestricted,Unrestricted Operations
+01000200,Fund for Greatest Needs,University-Wide,,true,Current Unrestricted,Unrestricted Operations
+01000300,Presidential Scholarship Endowment,University-Wide,,true,Endowment,Capital - Endowment
+01000400,Parent Fund,University-Wide,,true,Current Unrestricted,Unrestricted Operations
+01000500,Senior Class Gift,University-Wide,,true,Current Unrestricted,Unrestricted Operations
+01000600,Student Emergency Fund,University-Wide,,true,Current Restricted,Student Financial Aid
+01000700,First-Generation Student Scholarship,University-Wide,,true,Current Restricted,Student Financial Aid
+01000800,Centennial Celebration Fund,University-Wide,,false,Current Restricted,Restricted Program Support
+01000900,Pandemic Student Relief Fund,University-Wide,,false,Current Restricted,Student Financial Aid
+01001000,Distinguished Teaching Awards Fund,University-Wide,,true,Current Restricted,Faculty & Staff Support
+01001100,University Student Loan Fund,University-Wide,,true,Loan Funds,Student Financial Aid
+01001200,Alumni and Donor Events,University-Wide,,true,Gift-Non Deductible,Revenue
+01009900,Gift Holding Account,University-Wide,,true,Unassigned,Unassigned
+10000100,Arts and Sciences Annual Fund,College of Arts and Sciences,,true,Current Unrestricted,Unrestricted Operations
+10000200,Arts and Sciences Faculty Development Fund,College of Arts and Sciences,,true,Current Restricted,Faculty & Staff Support
+10010100,Biology Research Fund,College of Arts and Sciences,Biology,true,Current Restricted,Research
+10020100,Chemistry Undergraduate Research Fund,College of Arts and Sciences,Chemistry,true,Current Restricted,Research
+10030100,English Department Fund,College of Arts and Sciences,English,true,Current Restricted,Restricted Program Support
+10040100,History Department Fund,College of Arts and Sciences,History,true,Current Restricted,Restricted Program Support
+10050100,Mathematics Scholarship Fund,College of Arts and Sciences,Mathematics,true,Current Restricted,Student Financial Aid
+10060100,Psychology Research Fund,College of Arts and Sciences,Psychology,true,Current Restricted,Research
+10070100,Music Performance Fund,College of Arts and Sciences,Music,true,Current Restricted,Restricted Program Support
+10080100,Theatre Production Fund,College of Arts and Sciences,Theatre,true,Current Restricted,Restricted Program Support
+10090100,Journalism Program Fund,College of Arts and Sciences,Journalism,false,Current Restricted,Restricted Program Support
+20000100,Business School Annual Fund,School of Business,,true,Current Unrestricted,Unrestricted Operations
+20000200,Business Scholarship Endowment,School of Business,,true,Endowment,Capital - Endowment
+20000300,Business Faculty Fellowship Fund,School of Business,,true,Current Restricted,Faculty & Staff Support
+20010100,Accounting Excellence Fund,School of Business,Accounting,true,Current Restricted,Restricted Program Support
+20020100,Student Investment Fund,School of Business,Finance,true,Current Restricted,Restricted Program Support
+20030100,Entrepreneurship Center Fund,School of Business,Management,true,Property Buildings Equipment,Capital - Facilities
+20040100,Marketing Department Fund,School of Business,Marketing,true,Current Restricted,Restricted Program Support
+30000100,Engineering Annual Fund,School of Engineering,,true,Current Unrestricted,Unrestricted Operations
+30000200,Engineering Building Fund,School of Engineering,,true,Property Buildings Equipment,Capital - Facilities
+30000300,Engineering Research Fund,School of Engineering,,true,Current Restricted,Research
+30000400,Engineering Endowed Professorship,School of Engineering,,true,Endowment,Faculty & Staff Support
+30010100,Computer Science Scholarship Fund,School of Engineering,Computer Science,true,Current Restricted,Student Financial Aid
+30020100,Mechanical Engineering Lab Fund,School of Engineering,Mechanical Engineering,true,Current Restricted,Restricted Program Support
+30030100,Electrical Engineering Fund,School of Engineering,Electrical and Computer Engineering,true,Current Restricted,Restricted Program Support
+30040100,Civil Engineering Fund,School of Engineering,Civil Engineering,true,Current Restricted,Restricted Program Support
+40000100,Education Annual Fund,School of Education,,true,Current Unrestricted,Unrestricted Operations
+40010100,Teacher Education Scholarship,School of Education,Teacher Education,true,Current Restricted,Student Financial Aid
+40020100,Literacy Center Fund,School of Education,Literacy Studies,true,Current Restricted,Restricted Program Support
+50000100,Nursing Annual Fund,School of Nursing,,true,Current Unrestricted,Unrestricted Operations
+50000200,Nursing Simulation Lab Fund,School of Nursing,,true,Property Buildings Equipment,Capital - Facilities
+50000300,Nursing Scholarship Endowment,School of Nursing,,true,Endowment,Capital - Endowment
+50000400,Nursing Faculty Development Fund,School of Nursing,,true,Current Restricted,Faculty & Staff Support
+50000500,Nursing Student Loan Fund,School of Nursing,,true,Loan Funds,Student Financial Aid
+60000100,Law School Annual Fund,School of Law,,true,Current Unrestricted,Unrestricted Operations
+60000200,Law Scholarship Endowment,School of Law,,true,Endowment,Capital - Endowment
+60010100,Law Clinic Fund,School of Law,Clinical Programs,true,Current Restricted,Restricted Program Support
+60020100,Law Library Fund,School of Law,Law Library,true,Current Restricted,Restricted Program Support
+70000100,Athletics Excellence Fund,Athletics,,true,Current Restricted,Athletics
+70000200,Athletics Facilities Fund,Athletics,,true,Property Buildings Equipment,Capital - Facilities
+70000300,Athletics Priority Seating,Athletics,,true,Gift-Non Deductible,Athletics
+70010100,Men's Basketball Fund,Athletics,Men's Basketball,true,Current Restricted,Athletics
+70020100,Women's Basketball Fund,Athletics,Women's Basketball,true,Current Restricted,Athletics
+70030100,Women's Soccer Fund,Athletics,Women's Soccer,true,Current Restricted,Athletics
+70040100,Baseball Fund,Athletics,Baseball,true,Current Restricted,Athletics
+70050100,Swimming and Diving Fund,Athletics,Swimming and Diving,true,Current Restricted,Athletics
+70060100,Tennis Fund,Athletics,Tennis,false,Current Restricted,Athletics
+80000100,University Libraries Fund,University Libraries,,true,Current Unrestricted,Unrestricted Operations
+80000200,Library Renovation Fund,University Libraries,,false,Property Buildings Equipment,Capital - Facilities
+80010100,Special Collections Fund,University Libraries,Special Collections,true,Current Restricted,Restricted Program Support
+85000100,Student Life Fund,Student Affairs,,true,Current Unrestricted,Unrestricted Operations
+85010100,Career Services Fund,Student Affairs,Career Services,true,Current Restricted,Restricted Program Support
+85020100,Counseling Center Fund,Student Affairs,Counseling Services,true,Current Restricted,Restricted Program Support

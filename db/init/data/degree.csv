@@ -1,0 +1,311 @@
+constituent_id,division,department,college,major,degree_awarded,graduation_date,graduation_year
+2,School of Law,,LW,Law,JD,1961-05-13,1961
+3,School of Engineering,Computer Science,School of Engineering,Computer Science,BS,2002-05-11,2002
+4,School of Business,Accounting,,Accounting,BBA,1994-05-14,1994
+5,School of Nursing,,,Nursing,BSN,1992-05-09,1992
+8,College of Arts and Sciences,Political Science,College of Arts and Sciences,Political Science,BA,2006-05-13,2006
+10,College of Arts and Sciences,Biology,AS,Biology,BS,2018-12-15,2018
+13,School of Education,Teacher Education,ED,Secondary Education,BSEd,2016-05-14,2016
+14,School of Engineering,Electrical and Computer Engineering,,Electrical Engineering,BS,2018-05-12,2018
+14,School of Business,,Business Administration,Business Administration,MBA,2022-05-14,2022
+15,School of Engineering,Electrical and Computer Engineering,ENGR,Electrical Engineering,BS,1972-05-13,1972
+16,College of Arts and Sciences,History,A&S,History,BA,1978-12-16,1978
+16,College of Arts and Sciences,Economics,Economics,Economics,MA,1982-08-07,1982
+19,College of Arts and Sciences,Economics,College of Arts and Sciences,Economics,MA,2001-05-12,2001
+20,School of Education,Teacher Education,Teacher Education,Secondary Education,BSEd,1988-08-06,1988
+22,School of Business,Finance,Finance,Finance,BBA,1986-08-02,1986
+23,School of Nursing,,,Nursing,BSN,1987-05-09,1987
+24,School of Business,,BUS ADM,Business Administration,MBA,1975-08-02,1975
+25,School of Engineering,Computer Science,Computer Science,Computer Science,BS,1982-05-08,1982
+27,College of Arts and Sciences,English,College of Arts and Sciences,English,BA,2023-05-13,2023
+28,School of Business,Marketing,BU,Marketing,BBA,1991-08-03,1991
+28,College of Arts and Sciences,History,A&S,History,MA,1993-08-07,1993
+30,School of Law,,Law,Law,JD,1986-05-10,1986
+34,School of Business,Accounting,,Accounting,BBA,1991-05-11,1991
+37,School of Engineering,Computer Science,School of Engineering,Computer Science,BS,2008-08-02,2008
+39,College of Arts and Sciences,Theatre,,Theatre,BFA,1996-12-21,1996
+41,College of Arts and Sciences,History,AS,History,BA,2016-08-06,2016
+43,School of Business,Management,BU,Management,BBA,1996-08-03,1996
+43,School of Business,,School of Business Administration,Business Administration,MBA,2006-12-16,2006
+46,School of Nursing,,NU,Nursing,BSN,2013-05-11,2013
+50,School of Nursing,,School of Nursing,Nursing,BSN,2006-05-13,2006
+52,School of Engineering,Electrical and Computer Engineering,School of Engineering,Electrical Engineering,BS,1958-05-10,1958
+53,School of Business,,,Business Administration,MBA,1999-05-08,1999
+54,School of Business,Marketing,School of Business,Marketing,BBA,2026-05-09,2026
+55,School of Business,Marketing,School of Business Administration,Marketing,BBA,1958-05-10,1958
+60,College of Arts and Sciences,Journalism,,Journalism,BA,2009-05-09,2009
+60,College of Arts and Sciences,English,AS,English,MA,2014-05-10,2014
+63,College of Arts and Sciences,,A&S,,ND,1970-05-09,1970
+64,School of Business,Finance,School of Business Administration,Finance,BBA,2004-05-08,2004
+65,School of Engineering,Mechanical Engineering,EN,Mechanical Engineering,BS,2016-05-14,2016
+67,School of Law,,School of Law,,ND,1962-05-12,1962
+68,School of Business,Marketing,School of Business Administration,Marketing,BBA,1968-05-11,1968
+70,School of Engineering,Mechanical Engineering,School of Engineering,Mechanical Engineering,BS,2008-05-10,2008
+71,School of Nursing,,NU,Nursing,BSN,2013-05-11,2013
+71,School of Nursing,,NU,Nursing,MSN,2016-12-17,2016
+75,School of Business,Finance,School of Business Administration,Finance,BBA,2022-05-14,2022
+75,College of Arts and Sciences,Economics,College of Arts and Sciences,Economics,MA,2025-05-10,2025
+77,College of Arts and Sciences,History,College of Arts and Sciences,History,BA,2004-05-08,2004
+78,School of Engineering,Computer Science,EN,Computer Science,MS,2019-05-11,2019
+78,School of Engineering,Mechanical Engineering,Mechanical Engineering,Mechanical Engineering,PhD,2025-12-20,2025
+79,School of Engineering,Computer Science,School of Engineering,Computer Science,BS,2023-05-13,2023
+82,College of Arts and Sciences,Mathematics,A&S,Mathematics,BS,1998-05-09,1998
+83,School of Business,Finance,School of Business Administration,Finance,BBA,2002-05-11,2002
+83,School of Business,Accounting,School of Business Administration,Accounting,MAcc,2003-08-02,2003
+84,School of Engineering,Computer Science,Computer Science,Computer Science,MS,1987-08-01,1987
+85,School of Nursing,,School of Nursing,Nursing,MSN,1969-05-10,1969
+86,College of Arts and Sciences,Economics,A&S,Economics,ND,1979-05-12,1979
+87,School of Law,,School of Law,Law,JD,1963-05-11,1963
+89,School of Engineering,Civil Engineering,School of Engineering,Civil Engineering,BS,1958-05-10,1958
+89,School of Business,,School of Business Administration,Business Administration,MBA,1963-05-11,1963
+92,College of Arts and Sciences,Biology,College of Arts and Sciences,Biology,BS,2000-05-13,2000
+96,School of Business,Marketing,Marketing,Marketing,BBA,1984-05-12,1984
+96,College of Arts and Sciences,Biology,Biology,Biology,MS,1989-12-16,1989
+96,College of Arts and Sciences,Chemistry,AS,Chemistry,PhD,1994-12-17,1994
+98,School of Nursing,,NURS,Nursing,BSN,2006-05-13,2006
+99,School of Business,Accounting,BU,Accounting,BBA,2012-05-12,2012
+99,School of Business,,BU,Business Administration,MBA,2021-08-07,2021
+100,School of Engineering,Electrical and Computer Engineering,EN,Electrical Engineering,BS,1962-05-12,1962
+101,College of Arts and Sciences,History,History,History,BA,1995-05-13,1995
+102,School of Engineering,Mechanical Engineering,,Mechanical Engineering,BS,1994-05-14,1994
+104,School of Engineering,Mechanical Engineering,EN,Mechanical Engineering,BS,1995-05-13,1995
+105,School of Business,Management,School of Business Administration,Management,BBA,2020-05-09,2020
+107,School of Education,Teacher Education,ED,Special Education,BSEd,2018-05-12,2018
+110,School of Business,Finance,School of Business Administration,Finance,BBA,2006-05-13,2006
+112,School of Business,Management,School of Business Administration,Management,BBA,1966-05-14,1966
+113,School of Business,Accounting,BUS ADM,Accounting,BBA,1985-05-11,1985
+114,School of Business,Management,School of Business Administration,Management,BBA,2023-05-13,2023
+115,School of Engineering,Electrical and Computer Engineering,EN,Electrical Engineering,BS,2015-05-09,2015
+117,College of Arts and Sciences,History,AS,History,BA,2024-05-11,2024
+119,School of Business,,BUS ADM,,ND,1974-05-11,1974
+122,College of Arts and Sciences,Economics,A&S,Economics,BA,1971-05-08,1971
+122,College of Arts and Sciences,Biology,A&S,Biology,MS,1973-05-12,1973
+124,School of Business,Accounting,School of Business Administration,Accounting,BBA,1965-05-08,1965
+124,School of Law,,LAW,Law,JD,1971-05-08,1971
+128,College of Arts and Sciences,Political Science,AS,Political Science,BA,2004-05-08,2004
+132,College of Arts and Sciences,Mathematics,,Mathematics,BA,1994-05-14,1994
+135,School of Law,,School of Law,Law,JD,1967-05-13,1967
+138,College of Arts and Sciences,English,English,English,BA,1984-05-12,1984
+138,College of Arts and Sciences,History,History,History,MA,1988-08-06,1988
+139,College of Arts and Sciences,Economics,College of Arts and Sciences,Economics,BA,1962-05-12,1962
+140,College of Arts and Sciences,Political Science,College of Arts and Sciences,Political Science,BA,2004-05-08,2004
+144,School of Business,Accounting,,Accounting,BBA,1993-05-08,1993
+144,School of Law,,,Law,JD,1996-05-11,1996
+144,School of Law,,,Taxation,LLM,1998-05-09,1998
+145,School of Business,,BU,Business Administration,MBA,2017-08-05,2017
+146,School of Nursing,,,Nursing,BSN,1965-12-18,1965
+147,College of Arts and Sciences,Psychology,AS,Psychology,BA,2013-05-11,2013
+147,School of Business,,School of Business Administration,Business Administration,MBA,2023-08-05,2023
+149,College of Arts and Sciences,History,A&S,History,BA,1973-05-12,1973
+149,School of Law,,,Law,JD,1976-05-08,1976
+150,School of Engineering,Computer Science,School of Engineering,Computer Science,BS,1996-05-11,1996
+151,School of Law,,,Law,JD,1997-05-10,1997
+153,School of Business,,School of Business Administration,Business Administration,MBA,2021-05-08,2021
+155,College of Arts and Sciences,English,College of Arts and Sciences,English,BA,2003-05-10,2003
+156,College of Arts and Sciences,Political Science,,Political Science,BA,1999-08-07,1999
+156,School of Law,,School of Law,Law,JD,2002-05-11,2002
+159,School of Business,,BUS ADM,Business Administration,MBA,2013-05-11,2013
+160,School of Nursing,,NU,Nursing,BSN,2016-05-14,2016
+161,School of Nursing,,Nursing,Nursing,BSN,1986-05-10,1986
+163,College of Arts and Sciences,English,,English,BA,1993-05-08,1993
+164,School of Education,Teacher Education,School of Education,Special Education,BSEd,2023-05-13,2023
+165,School of Education,Teacher Education,School of Education,Special Education,BSEd,2003-05-10,2003
+167,School of Business,Finance,School of Business Administration,Finance,BBA,1965-05-08,1965
+168,College of Arts and Sciences,Political Science,Political Science,Political Science,BA,1975-05-10,1975
+172,School of Engineering,Computer Science,School of Engineering,Computer Science,BS,2014-05-10,2014
+172,School of Engineering,Electrical and Computer Engineering,EN,Electrical Engineering,MS,2015-08-01,2015
+173,College of Arts and Sciences,English,A&S,English,BA,2022-08-06,2022
+174,College of Arts and Sciences,Music,AS,Music,BA,2017-05-13,2017
+176,School of Law,,School of Law,Law,JD,2023-05-13,2023
+177,College of Arts and Sciences,Music,Music,Music,BA,1986-05-10,1986
+177,College of Arts and Sciences,Biology,,Biology,MS,1991-12-21,1991
+178,School of Education,Teacher Education,School of Education,Elementary Education,BSEd,2025-05-10,2025
+182,College of Arts and Sciences,Psychology,AS,Psychology,BA,1965-08-07,1965
+184,School of Business,Accounting,BUS ADM,Accounting,BBA,1976-12-18,1976
+184,School of Law,,Law,Law,JD,1981-05-09,1981
+184,School of Law,,Taxation,Taxation,LLM,1982-05-08,1982
+186,School of Business,Finance,School of Business Administration,Finance,BBA,2023-08-05,2023
+188,College of Arts and Sciences,History,AS,History,BA,2019-05-11,2019
+189,School of Business,Marketing,School of Business Administration,Marketing,BBA,2005-05-14,2005
+190,School of Business,Finance,,Finance,BBA,1998-05-09,1998
+193,School of Business,Accounting,BUS ADM,Accounting,MAcc,1976-05-08,1976
+195,College of Arts and Sciences,Political Science,AS,Political Science,BA,2017-08-05,2017
+196,College of Arts and Sciences,Political Science,College of Arts and Sciences,Political Science,BA,1968-05-11,1968
+197,School of Nursing,,Nursing,Nursing,MSN,1989-05-13,1989
+198,School of Law,,,Law,JD,1980-05-10,1980
+199,School of Engineering,Mechanical Engineering,EN,Mechanical Engineering,BS,1989-05-13,1989
+199,School of Engineering,Computer Science,,Computer Science,MS,1993-05-08,1993
+199,School of Engineering,Mechanical Engineering,EN,Mechanical Engineering,PhD,1996-05-11,1996
+201,School of Engineering,Computer Science,,Computer Science,BS,1992-05-09,1992
+201,School of Engineering,Computer Science,Computer Science,Computer Science,MS,1993-05-08,1993
+202,College of Arts and Sciences,Psychology,A&S,Psychology,BS,1979-05-12,1979
+203,School of Engineering,Mechanical Engineering,,Mechanical Engineering,BS,2002-05-11,2002
+203,School of Engineering,Civil Engineering,School of Engineering,Civil Engineering,MS,2003-05-10,2003
+204,College of Arts and Sciences,Biology,College of Arts and Sciences,Biology,BS,2023-05-13,2023
+205,College of Arts and Sciences,History,History,History,BA,1981-05-09,1981
+206,School of Nursing,,School of Nursing,Nursing,BSN,2022-08-06,2022
+207,School of Business,Management,Management,Management,BBA,1988-12-17,1988
+208,College of Arts and Sciences,Music,Music,Music,BA,1986-05-10,1986
+209,School of Education,Teacher Education,Teacher Education,Elementary Education,BSEd,1986-05-10,1986
+210,College of Arts and Sciences,Political Science,College of Arts and Sciences,Political Science,BA,2006-05-13,2006
+211,College of Arts and Sciences,Political Science,Political Science,Political Science,BA,2020-05-09,2020
+214,College of Arts and Sciences,History,,History,BA,1974-12-21,1974
+218,School of Engineering,Computer Science,Computer Science,Computer Science,BS,1984-05-12,1984
+219,School of Business,Finance,School of Business Administration,Finance,BBA,2002-12-21,2002
+221,College of Arts and Sciences,Mathematics,College of Arts and Sciences,Mathematics,BS,2000-05-13,2000
+222,School of Engineering,Mechanical Engineering,School of Engineering,Mechanical Engineering,BS,2004-05-08,2004
+222,School of Engineering,Civil Engineering,School of Engineering,Civil Engineering,MS,2005-05-14,2005
+224,School of Engineering,Electrical and Computer Engineering,School of Engineering,Electrical Engineering,BS,1960-05-14,1960
+224,School of Education,Teacher Education,School of Education,Curriculum and Instruction,MEd,1968-05-11,1968
+225,School of Engineering,Mechanical Engineering,EN,Mechanical Engineering,BS,2013-05-11,2013
+225,School of Engineering,Electrical and Computer Engineering,ENGR,Electrical Engineering,MS,2018-05-12,2018
+227,School of Engineering,Civil Engineering,ENGR,Civil Engineering,BS,2010-05-08,2010
+229,School of Business,Finance,School of Business Administration,Finance,BBA,1964-05-09,1964
+230,School of Engineering,Computer Science,,Computer Science,BS,1993-05-08,1993
+231,School of Business,Accounting,School of Business Administration,Accounting,BBA,2001-05-12,2001
+231,School of Education,Educational Leadership,Educational Leadership,Educational Leadership,MEd,2006-05-13,2006
+232,School of Business,,School of Business Administration,Business Administration,MBA,2020-05-09,2020
+234,College of Arts and Sciences,History,College of Arts and Sciences,History,BA,2004-05-08,2004
+235,School of Engineering,Civil Engineering,Civil Engineering,Civil Engineering,BS,1988-05-14,1988
+236,School of Business,Accounting,BU,Accounting,BBA,2012-05-12,2012
+237,School of Business,Finance,,Finance,BBA,2017-05-13,2017
+239,School of Law,,School of Law,Law,JD,2001-05-12,2001
+240,College of Arts and Sciences,,,,ND,1964-05-09,1964
+243,School of Law,,School of Law,Law,JD,2021-05-08,2021
+248,School of Engineering,Mechanical Engineering,Mechanical Engineering,Mechanical Engineering,BS,1983-12-17,1983
+253,School of Business,Marketing,BUS ADM,Marketing,BBA,1970-05-09,1970
+253,College of Arts and Sciences,English,A&S,English,MA,1971-05-08,1971
+253,College of Arts and Sciences,Chemistry,A&S,Chemistry,PhD,1974-08-03,1974
+255,School of Education,Teacher Education,,Elementary Education,BSEd,1991-05-11,1991
+255,College of Arts and Sciences,English,,English,MA,1992-05-09,1992
+255,College of Arts and Sciences,Psychology,,Psychology,PhD,1997-05-10,1997
+256,College of Arts and Sciences,Biology,,Biology,BS,2020-08-01,2020
+257,School of Nursing,,School of Nursing,Nursing,BSN,2019-08-03,2019
+258,College of Arts and Sciences,Mathematics,AS,Mathematics,BS,2018-05-12,2018
+261,College of Arts and Sciences,Chemistry,,Chemistry,BS,2021-05-08,2021
+263,College of Arts and Sciences,English,College of Arts and Sciences,English,BA,2005-05-14,2005
+267,School of Nursing,,School of Nursing,Nursing,BSN,2022-05-14,2022
+268,College of Arts and Sciences,Economics,College of Arts and Sciences,Economics,BA,1969-12-20,1969
+270,School of Business,Marketing,BU,Marketing,BBA,2013-05-11,2013
+271,College of Arts and Sciences,Biology,Biology,Biology,BS,1987-05-09,1987
+271,School of Law,,,Law,JD,1992-05-09,1992
+275,School of Business,Finance,BU,Finance,BBA,2018-12-15,2018
+277,School of Business,Accounting,School of Business,Accounting,BBA,2025-05-10,2025
+279,College of Arts and Sciences,Theatre,College of Arts and Sciences,Theatre,BFA,2020-05-09,2020
+281,College of Arts and Sciences,History,College of Arts and Sciences,History,BA,2022-05-14,2022
+285,School of Engineering,Electrical and Computer Engineering,School of Engineering,Electrical Engineering,BS,2008-05-10,2008
+287,College of Arts and Sciences,Biology,Biology,Biology,BS,1969-05-10,1969
+293,College of Arts and Sciences,Biology,A&S,Biology,BS,1984-05-12,1984
+294,School of Business,Finance,School of Business Administration,Finance,BBA,2009-05-09,2009
+294,School of Law,,LW,Law,JD,2013-05-11,2013
+294,School of Law,,Taxation,Taxation,LLM,2016-05-14,2016
+295,College of Arts and Sciences,Chemistry,College of Arts and Sciences,Chemistry,BS,1967-05-13,1967
+299,College of Arts and Sciences,Music,AS,Music,BA,2016-05-14,2016
+300,College of Arts and Sciences,English,College of Arts and Sciences,English,BA,2021-05-08,2021
+301,College of Arts and Sciences,English,College of Arts and Sciences,English,BA,2020-05-09,2020
+305,School of Education,Teacher Education,,Elementary Education,BSEd,1999-05-08,1999
+313,School of Business,Management,,Management,BBA,1993-05-08,1993
+313,School of Business,,School of Business Administration,Business Administration,MBA,2001-08-04,2001
+314,School of Education,Teacher Education,,Elementary Education,BSEd,1992-05-09,1992
+316,College of Arts and Sciences,History,History,History,BA,1981-05-09,1981
+318,School of Engineering,Mechanical Engineering,,Mechanical Engineering,MS,2006-05-13,2006
+318,School of Engineering,Mechanical Engineering,School of Engineering,Mechanical Engineering,PhD,2009-05-09,2009
+320,College of Arts and Sciences,Mathematics,AS,Mathematics,BS,2010-05-08,2010
+320,School of Law,,LW,Law,JD,2013-05-11,2013
+320,School of Law,,LW,Taxation,LLM,2014-05-10,2014
+321,School of Nursing,,School of Nursing,Nursing,BSN,2021-05-08,2021
+323,School of Business,,Business Administration,Business Administration,MBA,1966-05-14,1966
+326,School of Business,Finance,School of Business Administration,Finance,BBA,2024-05-11,2024
+327,School of Business,Finance,School of Business Administration,Finance,BBA,2001-05-12,2001
+327,School of Education,Teacher Education,,Curriculum and Instruction,MEd,2004-05-08,2004
+328,College of Arts and Sciences,Psychology,A&S,Psychology,BA,2022-05-14,2022
+330,School of Business,Finance,School of Business Administration,Finance,BBA,1967-05-13,1967
+333,College of Arts and Sciences,Psychology,College of Arts and Sciences,Psychology,BS,2001-05-12,2001
+333,School of Business,,School of Business Administration,Business Administration,MBA,2008-12-20,2008
+337,School of Engineering,Mechanical Engineering,,Mechanical Engineering,BS,1995-05-13,1995
+337,School of Business,,,Business Administration,MBA,1998-05-09,1998
+340,College of Arts and Sciences,Biology,,Biology,BS,1999-05-08,1999
+347,College of Arts and Sciences,Journalism,College of Arts and Sciences,Journalism,BA,2000-05-13,2000
+347,College of Arts and Sciences,History,A&S,History,MA,2003-12-20,2003
+351,College of Arts and Sciences,Biology,College of Arts and Sciences,Biology,BS,2000-05-13,2000
+351,School of Law,,School of Law,Law,JD,2003-05-10,2003
+352,School of Business,Management,School of Business Administration,Management,BBA,2023-05-13,2023
+352,School of Business,,School of Business,Business Administration,MBA,2026-08-01,2026
+354,School of Business,Marketing,,Marketing,BBA,1995-05-13,1995
+354,School of Law,,LW,Law,JD,2000-05-13,2000
+355,School of Business,Management,BU,Management,BBA,2011-05-14,2011
+356,College of Arts and Sciences,Economics,AS,Economics,BA,2013-05-11,2013
+357,School of Engineering,Computer Science,School of Engineering,Computer Science,BS,2003-05-10,2003
+358,School of Business,Accounting,Accounting,Accounting,BBA,1988-05-14,1988
+361,School of Engineering,Mechanical Engineering,School of Engineering,Mechanical Engineering,BS,2023-05-13,2023
+362,School of Engineering,Computer Science,ENGR,Computer Science,BS,1984-05-12,1984
+362,School of Engineering,Civil Engineering,Civil Engineering,Civil Engineering,MS,1989-08-05,1989
+366,School of Nursing,,Nursing,Nursing,BSN,1984-05-12,1984
+367,School of Business,Management,School of Business,Management,BBA,2025-05-10,2025
+369,School of Business,Marketing,School of Business,Marketing,BBA,2026-05-09,2026
+370,School of Engineering,Mechanical Engineering,School of Engineering,Mechanical Engineering,BS,2004-05-08,2004
+379,College of Arts and Sciences,English,English,English,BA,1980-05-10,1980
+380,School of Business,Finance,School of Business Administration,Finance,BBA,2020-05-09,2020
+381,School of Nursing,,Nursing,Nursing,BSN,1995-05-13,1995
+383,College of Arts and Sciences,Economics,AS,Economics,BA,2015-05-09,2015
+386,School of Engineering,Mechanical Engineering,EN,Mechanical Engineering,BS,2016-05-14,2016
+387,School of Business,Finance,BUS ADM,Finance,BBA,1978-05-13,1978
+388,School of Business,,BU,Business Administration,MBA,1983-12-17,1983
+390,School of Business,Finance,Finance,Finance,BBA,1983-12-17,1983
+392,School of Education,Teacher Education,EDUC,Secondary Education,BSEd,1968-12-21,1968
+394,College of Arts and Sciences,Chemistry,AS,Chemistry,BS,1965-05-08,1965
+396,School of Engineering,Mechanical Engineering,School of Engineering,Mechanical Engineering,BS,2025-05-10,2025
+398,School of Engineering,Computer Science,,Computer Science,BS,1990-05-12,1990
+401,College of Arts and Sciences,Biology,College of Arts and Sciences,Biology,BS,2024-05-11,2024
+402,School of Engineering,Electrical and Computer Engineering,EN,Electrical Engineering,BS,2015-05-09,2015
+403,School of Business,Marketing,Marketing,Marketing,BBA,1986-05-10,1986
+405,College of Arts and Sciences,Biology,,Biology,BS,1995-12-16,1995
+410,College of Arts and Sciences,Political Science,College of Arts and Sciences,Political Science,BA,1958-12-20,1958
+410,School of Business,,School of Business Administration,Business Administration,MBA,1966-08-06,1966
+415,School of Business,Accounting,BU,Accounting,BBA,2012-05-12,2012
+415,School of Business,,,Business Administration,MBA,2022-08-06,2022
+416,College of Arts and Sciences,English,English,English,BA,2021-05-08,2021
+418,School of Engineering,Mechanical Engineering,School of Engineering,Mechanical Engineering,MS,2015-05-09,2015
+421,College of Arts and Sciences,Political Science,College of Arts and Sciences,Political Science,BA,2026-05-09,2026
+423,School of Education,Teacher Education,,Elementary Education,BSEd,1994-08-06,1994
+427,School of Education,Teacher Education,ED,Secondary Education,BSEd,2016-05-14,2016
+429,College of Arts and Sciences,Mathematics,Mathematics,Mathematics,BS,1986-05-10,1986
+429,School of Business,Accounting,Accounting,Accounting,MAcc,1988-12-17,1988
+430,School of Engineering,Civil Engineering,EN,Civil Engineering,BS,2019-12-21,2019
+431,School of Education,Teacher Education,EDUC,Elementary Education,BSEd,1983-05-14,1983
+433,School of Engineering,Computer Science,School of Engineering,Computer Science,BS,2005-12-17,2005
+436,School of Nursing,,NU,Family Nurse Practitioner,MSN,2019-08-03,2019
+438,School of Business,Marketing,School of Business,Marketing,BBA,2026-08-01,2026
+440,College of Arts and Sciences,Political Science,College of Arts and Sciences,Political Science,BA,1972-05-13,1972
+443,College of Arts and Sciences,Economics,College of Arts and Sciences,Economics,BA,2009-05-09,2009
+444,College of Arts and Sciences,Psychology,AS,Psychology,BA,2010-12-18,2010
+445,School of Engineering,Mechanical Engineering,,Mechanical Engineering,BS,1995-05-13,1995
+445,College of Arts and Sciences,Mathematics,,Mathematics,MS,1997-05-10,1997
+445,College of Arts and Sciences,Psychology,College of Arts and Sciences,Psychology,PhD,2003-08-02,2003
+446,School of Law,,School of Law,Law,JD,2024-05-11,2024
+446,School of Law,,School of Law,Taxation,LLM,2025-08-02,2025
+450,School of Nursing,,School of Nursing,Family Nurse Practitioner,MSN,2025-12-20,2025
+451,School of Engineering,Electrical and Computer Engineering,,Electrical Engineering,BS,1999-08-07,1999
+453,School of Business,Finance,BU,Finance,BBA,2015-05-09,2015
+455,School of Engineering,Electrical and Computer Engineering,EN,Electrical Engineering,BS,2016-05-14,2016
+456,College of Arts and Sciences,Political Science,,Political Science,BA,1996-05-11,1996
+457,School of Engineering,Mechanical Engineering,,Mechanical Engineering,BS,1995-05-13,1995
+461,School of Business,Accounting,School of Business Administration,Accounting,BBA,2023-05-13,2023
+463,School of Nursing,,NU,Nursing,BSN,2016-05-14,2016
+466,School of Education,Teacher Education,School of Education,Elementary Education,BSEd,2009-05-09,2009
+467,School of Business,,School of Business Administration,Business Administration,MBA,2004-05-08,2004
+468,School of Engineering,Mechanical Engineering,ENGR,Mechanical Engineering,ND,1968-05-11,1968
+471,School of Education,Teacher Education,School of Education,Elementary Education,BSEd,1958-05-10,1958
+474,School of Engineering,Mechanical Engineering,School of Engineering,Mechanical Engineering,BS,2007-05-12,2007
+478,School of Engineering,Mechanical Engineering,,Mechanical Engineering,BS,1966-05-14,1966
+479,School of Engineering,Computer Science,EN,Computer Science,BS,2012-05-12,2012
+486,College of Arts and Sciences,Psychology,Psychology,Psychology,BS,1960-08-06,1960
+487,College of Arts and Sciences,English,A&S,English,BA,1973-05-12,1973
+488,School of Law,,LW,Law,JD,2023-05-13,2023
+489,College of Arts and Sciences,English,AS,English,ND,1977-05-14,1977
+490,School of Nursing,,Nursing,Nursing,BSN,1983-05-14,1983
+491,School of Business,Marketing,Marketing,Marketing,BBA,1985-05-11,1985
+494,School of Engineering,Electrical and Computer Engineering,Electrical and Computer Engineering,Electrical Engineering,BS,1986-12-20,1986
+496,College of Arts and Sciences,Chemistry,College of Arts and Sciences,Chemistry,BS,1962-05-12,1962
+499,School of Engineering,Electrical and Computer Engineering,School of Engineering,Computer Engineering,BS,2007-05-12,2007
+500,School of Nursing,,School of Nursing,Nursing,BSN,2023-05-13,2023

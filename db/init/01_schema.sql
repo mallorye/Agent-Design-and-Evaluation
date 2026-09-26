@@ -4,12 +4,13 @@
    Context : PostgreSQL 15+ (NULLS NOT DISTINCT in contact_preference needs 15;
              a fallback for older versions is noted at that index).
              Tested on PostgreSQL 18
-   Purpose : Six normalized base tables modeled on common Advancement data needs.
+   Purpose : Seven normalized base tables modeled on common Advancement data needs.
    Tables  : designation              (lookup)
              constituent              (hub)
              contribution             (fact; FKs to constituent + designation)
              contact_preference       (1:N from constituent)
              constituent_relationship (self-referencing M:N on constituent)
+             degree
    
    ============================================================================= */
 

@@ -1,0 +1,186 @@
+contact_preference_id,constituent_id,preference_type,restriction_type,contact_method,department,end_date
+1,10,Solicitations,Exclude,Email,,2027-11-14
+2,14,Event Invitations,Exclude,All,Athletics,2027-06-08
+3,18,Communication,Include,Email,Student Affairs,
+4,23,Solicitations,Exclude,All,,
+5,28,Communication,No Reconnect,All,,
+6,29,Solicitations,Exclude,Letter,,
+7,30,Communication,Exclude,All,,
+8,36,Communication,Include,Email,Athletics,
+9,36,Solicitations,Exclude,Email,,
+10,52,Communication,Include,Email,School of Engineering,
+11,53,Solicitations,Exclude,All,,
+12,54,Communication,Include,Email,School of Business,
+13,56,Solicitations,Exclude,All,Athletics,
+14,57,Event Invitations,Exclude,Email,,2028-05-06
+15,59,Communication,Exclude,Email,,
+16,60,Communication,Exclude,All,,
+17,63,Event Invitations,Exclude,All,,
+18,64,Solicitations,Exclude,Email,,2028-01-06
+19,66,Communication,No Reconnect,All,,
+20,71,Communication,Include,Email,School of Nursing,
+21,72,Solicitations,Exclude,Letter,,
+22,72,Event Invitations,Exclude,All,,
+23,78,Solicitations,Exclude,Email,,
+24,80,Event Invitations,Exclude,Letter,Athletics,2025-06-06
+25,81,Solicitations,Exclude,All,Student Affairs,2024-01-26
+26,84,Solicitations,Exclude,Email,,
+27,87,Solicitations,Exclude,All,,2027-05-27
+28,89,Solicitations,Exclude,Letter,,
+29,90,Communication,Exclude,Email,,
+30,90,Solicitations,Exclude,All,,
+31,91,Solicitations,Exclude,All,,2024-11-05
+32,95,Solicitations,Exclude,All,School of Engineering,2024-08-30
+33,99,Event Invitations,Exclude,All,,
+34,101,Event Invitations,Exclude,All,,2028-01-26
+35,103,Solicitations,Exclude,Letter,,
+36,103,Event Invitations,Exclude,Letter,,
+37,104,Solicitations,Exclude,All,College of Arts and Sciences,2024-04-04
+38,112,Event Invitations,Include,Email,School of Business,
+39,121,Solicitations,Exclude,Email,,
+40,126,Event Invitations,Exclude,All,,
+41,127,Event Invitations,Include,Email,School of Education,
+42,137,Solicitations,Exclude,All,Athletics,
+43,138,Solicitations,Exclude,Letter,,
+44,141,Solicitations,Exclude,Email,,
+45,146,Solicitations,Exclude,Email,,
+46,149,Event Invitations,Include,Email,School of Law,
+47,149,Solicitations,Exclude,All,School of Nursing,
+48,154,Event Invitations,Include,Email,College of Arts and Sciences,
+49,155,Communication,No Reconnect,All,,
+50,158,Solicitations,Exclude,Letter,,
+51,160,Communication,No Reconnect,All,,
+52,162,Solicitations,Exclude,Letter,,
+53,166,Communication,Include,Email,School of Law,
+54,167,Solicitations,Exclude,All,Student Affairs,
+55,170,Solicitations,Exclude,All,,2025-10-02
+56,171,Solicitations,Exclude,Email,,
+57,172,Solicitations,Exclude,All,,2028-04-04
+58,173,Event Invitations,Exclude,All,,
+59,177,Solicitations,Exclude,All,,2027-04-27
+60,182,Event Invitations,Exclude,Email,School of Law,2027-05-31
+61,185,Event Invitations,Exclude,All,,2026-08-09
+62,188,Solicitations,Exclude,All,Athletics,
+63,191,Solicitations,Exclude,Email,,
+64,192,Solicitations,Exclude,Email,,
+65,195,Solicitations,Exclude,Email,,
+66,198,Communication,Include,Email,School of Law,
+67,200,Event Invitations,Exclude,All,,
+68,206,Communication,Include,Email,School of Nursing,
+69,209,Communication,Exclude,Email,,
+70,209,Solicitations,Exclude,Email,,
+71,211,Solicitations,Exclude,All,,2024-09-11
+72,213,Solicitations,Exclude,All,,
+73,213,Communication,Include,Email,Student Affairs,
+74,214,Event Invitations,Exclude,Letter,Athletics,2026-08-03
+75,215,Solicitations,Exclude,Email,,
+76,216,Event Invitations,Exclude,All,,
+77,216,Solicitations,Exclude,All,Athletics,2024-04-28
+78,218,Solicitations,Exclude,Email,,
+79,219,Solicitations,Exclude,All,,2028-02-02
+80,228,Event Invitations,Include,Email,Student Affairs,
+81,232,Solicitations,Exclude,All,,
+82,235,Solicitations,Exclude,Letter,,
+83,240,Solicitations,Exclude,Email,,2026-05-04
+84,241,Solicitations,Exclude,All,,2024-10-12
+85,247,Event Invitations,Exclude,All,,
+86,247,Solicitations,Exclude,All,School of Education,2028-01-10
+87,254,Event Invitations,Exclude,All,,
+88,254,Solicitations,Exclude,All,School of Business,
+89,259,Solicitations,Exclude,All,,2024-07-23
+90,260,Solicitations,Exclude,Letter,,
+91,260,Communication,Include,Email,School of Law,
+92,261,Event Invitations,Include,Email,College of Arts and Sciences,
+93,265,Communication,Exclude,All,,
+94,266,Communication,Exclude,Email,,
+95,269,Event Invitations,Exclude,All,,
+96,270,Communication,Include,Email,School of Business,
+97,270,Solicitations,Exclude,Letter,,
+98,276,Event Invitations,Exclude,All,,
+99,276,Solicitations,Exclude,All,School of Engineering,
+100,280,Solicitations,Exclude,All,Athletics,
+101,281,Event Invitations,Exclude,All,,
+102,283,Solicitations,Exclude,All,Student Affairs,
+103,284,Solicitations,Exclude,Email,,
+104,288,Communication,Exclude,All,,
+105,290,Communication,No Reconnect,All,,
+106,292,Solicitations,Exclude,Email,,2028-04-27
+107,295,Solicitations,Exclude,All,,2023-06-04
+108,300,Solicitations,Exclude,All,,
+109,308,Event Invitations,Exclude,Letter,,
+110,314,Solicitations,Exclude,Letter,,
+111,314,Communication,Exclude,Email,,
+112,318,Communication,Include,Email,School of Engineering,
+113,318,Solicitations,Exclude,Email,,
+114,326,Solicitations,Exclude,Letter,,
+115,333,Solicitations,Exclude,All,College of Arts and Sciences,
+116,335,Communication,Include,Email,School of Engineering,
+117,337,Solicitations,Exclude,Letter,,
+118,337,Communication,Include,Email,School of Engineering,
+119,339,Communication,No Reconnect,All,,
+120,343,Solicitations,Exclude,All,,2025-08-31
+121,348,Solicitations,Exclude,Email,,
+122,349,Solicitations,Exclude,All,,2024-10-28
+123,350,Event Invitations,Exclude,Letter,,
+124,351,Solicitations,Exclude,All,,2024-12-16
+125,356,Solicitations,Exclude,All,School of Nursing,
+126,356,Communication,Exclude,Email,,
+127,364,Communication,Include,Email,School of Education,
+128,365,Solicitations,Exclude,Email,,
+129,366,Communication,No Reconnect,All,,
+130,369,Event Invitations,Exclude,Email,,2024-09-06
+131,371,Solicitations,Exclude,All,,
+132,371,Event Invitations,Exclude,Letter,,
+133,376,Solicitations,Exclude,All,School of Education,
+134,380,Event Invitations,Include,Email,School of Business,
+135,380,Solicitations,Exclude,All,College of Arts and Sciences,
+136,383,Communication,No Reconnect,All,,
+137,387,Solicitations,Exclude,All,Athletics,2025-10-08
+138,388,Communication,Exclude,All,,
+139,391,Event Invitations,Exclude,All,,2026-12-05
+140,392,Solicitations,Exclude,All,,
+141,400,Solicitations,Exclude,Email,,
+142,400,Event Invitations,Include,Email,School of Engineering,
+143,401,Communication,Include,Email,College of Arts and Sciences,
+144,405,Solicitations,Exclude,Email,,
+145,407,Solicitations,Exclude,All,School of Engineering,
+146,407,Event Invitations,Include,Email,School of Business,
+147,409,Solicitations,Exclude,Email,,
+148,409,Event Invitations,Exclude,All,,
+149,411,Event Invitations,Exclude,All,,
+150,415,Solicitations,Exclude,Email,,
+151,416,Communication,No Reconnect,All,,
+152,421,Solicitations,Exclude,All,Athletics,
+153,427,Event Invitations,Exclude,All,Athletics,2024-05-18
+154,428,Solicitations,Exclude,Letter,,2023-11-06
+155,431,Communication,Exclude,Email,,
+156,431,Event Invitations,Exclude,All,,
+157,434,Solicitations,Exclude,All,,2024-08-17
+158,439,Solicitations,Exclude,All,,2023-02-19
+159,441,Solicitations,Exclude,All,School of Nursing,
+160,443,Event Invitations,Include,Email,College of Arts and Sciences,
+161,445,Communication,Exclude,Email,,
+162,445,Solicitations,Exclude,Letter,,
+163,449,Solicitations,Exclude,Email,,
+164,449,Event Invitations,Exclude,All,,
+165,452,Solicitations,Exclude,All,,2024-08-04
+166,453,Communication,Exclude,All,,
+167,454,Solicitations,Exclude,All,,2023-03-25
+168,455,Solicitations,Exclude,Letter,,
+169,455,Event Invitations,Include,Email,School of Engineering,
+170,456,Communication,Include,Email,College of Arts and Sciences,
+171,456,Solicitations,Exclude,All,School of Nursing,
+172,457,Event Invitations,Exclude,Letter,,
+173,462,Solicitations,Exclude,All,,2025-07-01
+174,463,Communication,No Reconnect,All,,
+175,465,Communication,No Reconnect,All,,
+176,470,Solicitations,Exclude,All,Athletics,
+177,472,Solicitations,Exclude,Email,,
+178,472,Event Invitations,Include,Email,School of Law,
+179,477,Solicitations,Exclude,All,,
+180,479,Event Invitations,Exclude,All,,
+181,481,Communication,Include,Email,School of Nursing,
+182,487,Communication,Exclude,Email,,
+183,494,Solicitations,Exclude,Email,,
+184,496,Event Invitations,Exclude,All,School of Law,2026-07-17
+185,497,Event Invitations,Exclude,All,,2026-04-07
