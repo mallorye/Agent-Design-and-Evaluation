@@ -1,0 +1,26 @@
+Advancement Data Dictionary v_0
+Maintained By:  Data Team Analysts
+Fiscal Year: Starts July 1 of Fiscal Year -1 and ends June 30th of Fiscal Year.
+Contactable: A constituent is considered contactable if they are a) living b) have at least one method of contact populated – address, email, phone c) do not have a do not contact or do not solicit exclusion across every method of contact available.
+Constituent: active individual not an organization
+Parent: Personal relationship is Parent. May have other affiliations.
+Householding logic: If individual is single, they are considered the primary spouse if they are person1 in the constituent_relationship table.
+Hard credit donor: the entity that provides the funds and receives a tax receipt.
+Soft credit donor: Recognizes individual(s) who made gift possible without legally owning or donating the money. Could be spouse or couple on a DAF gift.
+Pledge: A promise to pay in planned installments over time. In contribution_type
+Pledge Payment: Payment on a pledge. In our system will be linked by the pledge_number. In contribution_type
+Matching Gift: An amount an entity has agreed to pay in response to an eligible gift from a donor. Hard credit to entity that will pay, soft credit to donor.
+Matching Gift Payment: Payment in response to matching gift, hard credit to the paying entity, soft credit to the original donor who set up the matching gift.
+Gift: contribution_type = Outright Gift, straightforward gift 
+Bequest Expectancy = Promised money from a donor to pay upon passing away. Drawn up in an agreement.
+Bequest Expectancy Payment = pay out of what was promised in Bequest Expectancy
+Commitment Fundraising Definition = Theme: what was promised. Gifts with contribution type: Pledge, Gift, Matching Gift, Bequest. If Pledge was cancelled, substitute Pledge_ amount_ paid instead of amount.
+Cash Fundraising Definition = cash in hand. Gifts with contribution type Pledge Payment, Gift, Matching Gift Payment, Bequest Expectancy Payment.
+Definition of gift to University = What was given to one contribution number – may represent gifts to multiple designations.
+Definition of gift to Department or Unit = part of the gift that maps to the designation and related division.
+
+“Today’s date" is always Sept 23, 2026
+
+
+
+
