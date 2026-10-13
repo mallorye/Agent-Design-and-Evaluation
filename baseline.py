@@ -21,7 +21,7 @@ load_dotenv()
 
 api_key = os.getenv("OPENROUTER_API_KEY")
 if not api_key:
-    raise ValueError("OPENROUTER_API_KEY not found — check your .env file")
+    raise ValueError("OPENROUTER_API_KEY not found")
 
 client = OpenAI(
     api_key=api_key,
@@ -89,7 +89,7 @@ def sql_output_evaluate(output):
 #connect to PosgressDB as a user  and send output to get results
 
 def run_sql(sql: str):
-    """Execute extracted SQL as agent_reader; return (rows, error) — exactly one is None."""
+    """Execute extracted SQL as agent_reader; return (rows, error) """
     conninfo = (
         f"host={os.getenv('DB_HOST')} port={os.getenv('DB_PORT')} "
         f"dbname={os.getenv('DB_NAME')} user={os.getenv('DB_USER')} "
