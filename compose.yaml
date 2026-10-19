@@ -1,6 +1,6 @@
 services:
   db:
-    image: pgvector/pgvector:pg18
+    image: postgres:18
     container_name: postgres-dev
     environment:
         POSTGRES_USER: senioranalyst
