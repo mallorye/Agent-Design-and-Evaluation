@@ -9,17 +9,23 @@ A reproducible evaluation harness that scores a deliberately simple, hand-coded 
 
 The system: one hand-coded agent with a tool loop on the raw API, and a single-turn baseline that cannot ask as the control. No orchestration, no framework, no UI, no fine-tuning.
 
-## Status (as of Oct 18, 2026)
+## Status (as of Oct 25, 2026)
 
-Done: environment (Postgres in Docker Compose, self-seeding synthetic database, read-only `agent_reader` role); baseline run on five requests with JSONL logs; data dictionary v1 with five labeled ambiguity dimensions; eval set v1 (30 tasks, labeled ask / answer / abstain); second-rater pass on 15 tasks.
+Done: environment (Postgres in Docker Compose, self-seeding synthetic database, read-only `agent_reader` role); baseline run on five requests with JSONL logs; data dictionary v1 with five labeled ambiguity dimensions; eval set v1 (30 tasks, labeled ask / answer / abstain); second-rater pass on 15 tasks; agent v1 running end to end on the five baseline requests with trajectory logs.
 
-Next: agent v1. The methodology write-up follows v1 rather than preceding it.
+Next: gold SQL and the methodology write-up, then harness v1.
 
 ## Where things are
 
-- `compose.yaml` and `db/` — the database. `docker compose up` builds and seeds it; credentials for the local database are in the compose file.
-- `baseline.py` — the single-turn control. Needs an API key in a `.env` file (not in the repo).
-- The shared folder holds the study plan, definition of done, data dictionary, eval set, checkpoint documents, and status notes.
+- `compose.yaml` and `db/` — the database. `docker compose up` builds and seeds it.
+- `db_sql.py` — shared read-only database connection used by both scripts.
+- `baseline.py` — the single-turn control.
+- `agent_v1.py` — the agent: five tools, system prompt in `system_prompt.txt`, flow in `docs/agent_v1_flowchart.md`.
+- `data_dictionary_v0.txt` / `data_dictionary_v1.txt` — the dictionary versions the baseline and agent read.
+- `validation_lookup.csv` — published figures the agent checks aggregates against.
+- `logs/` — JSONL records, one per run (`baseline_runs.jsonl`, `agent_runs.jsonl`).
+- Both scripts need a `.env` with the database connection values and an OpenRouter API key (not in the repo).
+- The shared folder holds the study plan, definition of done, eval set, checkpoint documents, and status notes.
 - At each checkpoint, one document in the shared folder and one tag on this repository carry the same name.
 
 ## Checkpoints
@@ -27,7 +33,7 @@ Next: agent v1. The methodology write-up follows v1 rather than preceding it.
 | # | Deliverable | Status |
 |---|---|---|
 | 1 | Literature review | Partial (practitioner guides done; remaining sources by end of quarter) |
-| 2 | Agent v1 | In progress |
+| 2 | Agent v1 | Running on the five baseline requests |
 | 3 | Methodology write-up | After agent v1 (moved from Oct 16) |
 | 4 | Agent and harness v1, frozen, with results table and judge validation | Fri Nov 6 |
 | 5 | Final report and presentation | Tue Nov 17 |
