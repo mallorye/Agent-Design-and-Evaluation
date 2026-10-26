@@ -7,17 +7,17 @@
 #libraries
 import os
 from openai import OpenAI
-from dotenv import load_dotenv, find_dotenv
-import psycopg
 from dotenv import load_dotenv
 import json
 from datetime import datetime, timezone
+from db_sql import run_sql #connect to PosgressDB as a user  and send output to get results
+
 
 ## Setting up API key
 
 load_dotenv()
 
-### Setting up OpenAI connection
+### Setting up Openrouter connection
 
 api_key = os.getenv("OPENROUTER_API_KEY")
 if not api_key:
@@ -86,22 +86,7 @@ def sql_output_evaluate(output):
         return clean
 
 
-#connect to PosgressDB as a user  and send output to get results
 
-def run_sql(sql: str):
-    """Execute extracted SQL as agent_reader; return (rows, error) """
-    conninfo = (
-        f"host={os.getenv('DB_HOST')} port={os.getenv('DB_PORT')} "
-        f"dbname={os.getenv('DB_NAME')} user={os.getenv('DB_USER')} "
-        f"password={os.getenv('DB_PASSWORD')}"
-    )
-    try:
-        with psycopg.connect(conninfo) as conn:
-            with conn.cursor() as cur:
-                cur.execute(sql)
-                return cur.fetchall(), None
-    except psycopg.Error as e:
-        return None, str(e)
 
 ##Creating Logging 
 

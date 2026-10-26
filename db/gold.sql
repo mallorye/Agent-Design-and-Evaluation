@@ -5,8 +5,9 @@
 
 
 
-
---  Please provide a list of parents who gave $1,000 in the last two years.
+/*--------------------------------------------------------------------------/
+  1 - Please provide a list of parents who gave $1,000 in the last two years.
+  ------------------------------------------------------------------------*/
 with parents as(
     select distinct person1_id from synth_advancement.constituent_relationship 
     where person1_role = 'Parent' 
@@ -29,3 +30,14 @@ inner join parents p on c.constituent_id = p.person1_id
 inner join last_two_years_1000 t on t.constituent_id = p.person1_id
 
 
+/*--------------------------------------------------------------------------/
+  2 - What is our commitment  fundraising total this year so far?
+  ------------------------------------------------------------------------*/
+
+
+select
+sum(Case when c.pledge_status = 'Canceled' then c.pledge_amount_paid else c.amount END) 
+from synth_advancement.contribution c
+where c.fiscal_year =  2027
+and c.credit = 'Hard'
+and c.contribution_type in ('Pledge','Gift','Bequest Expectancy','Matching Gift' )

@@ -292,7 +292,7 @@ COMMENT ON TABLE degree IS 'Each row is one person + one degree. There may be se
 
 -- creating a role that can connecct
 DROP ROLE IF EXISTS agent_reader;
-CREATE ROLE agent_reader LOGIN PASSWORD 'agent_reader';
+CREATE ROLE agent_reader LOGIN PASSWORD 'ohio1234';
 
 GRANT CONNECT ON DATABASE artificial_advancement TO agent_reader;
 GRANT USAGE ON SCHEMA synth_advancement TO agent_reader;
