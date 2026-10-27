@@ -1,0 +1,45 @@
+Response to project review of Oct 13, 2026 (connin_berg_proj_review_101326)
+Mallory Berg - COMP 4991 - status as of Mon Oct 26, 2026
+Repo state: main at "README update" (agent v1 committed Oct 25)
+
+Status key: DONE | BY DESIGN (addressed by a decision, not a code change) | QUEUED (planned, not started) | OPEN (no plan yet)
+
+ID    Status      Note
+----  ----------  -----------------------------------------------------------------------
+E-01  QUEUED      gold.sql task 1 still matches parents on person1_role only. UNION fix
+                  goes in with the rest of the gold SQL.
+E-02  DONE        Agent receives SQL as a structured tool argument; no text parsing of
+                  model replies. Baseline's fence-stripping path is unchanged.
+E-03  DONE        db_sql.py opens every connection read-only with a 15s statement
+                  timeout and refuses any DB_USER other than agent_reader.
+E-04  BY DESIGN   Dictionary v1: individual totals use hard and soft credit; university,
+                  unit, and group totals use hard only. The task-1 key (a list of
+                  individuals with totals) therefore has no credit filter on purpose.
+E-05  QUEUED      Canceled-pledge substitution in gold.sql applies to any Canceled row;
+                  dictionary limits it to pledges. Fix with the gold SQL.
+E-06  OPEN        Dictionary still lists phone as a contact method; no phone column.
+E-07  DONE        Dictionary v1 uses stored values: Gift, Bequest Expectancy,
+                  pledge_amount_paid. ("canceled" is lower-case; stored value is Canceled.)
+E-08  DONE        Householding rewritten in v1: primary spouse = person1 where role is
+                  Spouse; singles are their own primary. Life Partner pairs not addressed.
+E-09  QUEUED      Scoring code is harness v1. Gold SQL in progress (2 of 25 written).
+E-10  BY DESIGN   The five baseline requests are tasks B1-B5 of Eval Set v1.
+E-11  PARTIAL     Agent log records carry prompt_version and dictionary_version. No run
+                  ID or finish_reason yet. No requirements.txt yet.
+E-12  OPEN        Port still published as 5432:5432; passwords in compose.yaml and schema.
+E-13  OPEN        Full schema file (including the role line) is sent to the model.
+E-14  BY DESIGN   The 377-407 range for "contactable" is the ambiguity the study measures.
+                  Dictionary v1 defines five ambiguity dimensions; B1 is labeled Ask on
+                  contactable_scope. Agent v1 asked on that dimension on its first run.
+E-15  OPEN        Schema header says "Seven" tables; there are six.
+E-16  OPEN        No unique key on contribution or degree.
+E-17  OPEN        contact_preference.department holds division names.
+E-18  OPEN        Loader location note in data_generation_spec.md; hand-typed row counts.
+E-19  OPEN        Baseline text handling (baseline only; not used by the agent).
+E-20  OPEN        Baseline import tidy-ups; files opened without close.
+E-21  DONE        pgvector image replaced with postgres:18. README updated Oct 25.
+
+Not in the review, done since: shared db_sql.py used by both scripts; agent v1 with five
+tools (ask_user, run_query, check_reference, submit_answer, abstain); system prompt in
+system_prompt.txt; flow in docs/agent_v1_flowchart.md; agent runs logged to
+logs/agent_runs.jsonl with the full message trajectory.
