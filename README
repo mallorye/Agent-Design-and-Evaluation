@@ -22,7 +22,6 @@ Next: baseline rerun under dictionary v2, prompt v2, then harness v1 in Inspect.
 - `db_sql.py` — shared read-only database connection used by both scripts.
 - `baseline.py` — the single-turn control.
 - `agent_v1.py` — the agent: five tools, system prompt in `system_prompt.txt`, flow in `docs/agent_v1_flowchart.md`.
-- `data_dictionary_v0.txt` / `data_dictionary_v1.txt` — the dictionary versions the baseline and agent read.
 - `data_dictionary_v2.txt` — the dictionary both scripts read. `v0` and `v1` are kept for provenance (v0 was the baseline's original, v1 the agent's during development); no reported run uses them.
 - `validation_lookup.csv` — published figures the agent checks aggregates against.
 - `logs/` — JSONL records, one per run (`baseline_runs.jsonl`, `agent_runs.jsonl`).
