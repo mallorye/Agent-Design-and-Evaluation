@@ -42,4 +42,8 @@ Next: baseline rerun under dictionary v2, prompt v2, then harness v1 in Inspect.
 
 ## AI assistance
 
-I use an LLM (Claude) as a thinking partner for planning and critique. Code in this repository is mine unless a file header says otherwise; I label any AI-assisted code.
+I use an LLM (Claude) as a thinking partner for planning and critique. The design is mine: the agent and harness architecture, the eval set, the gold queries, and the definitions in the data dictionary.
+
+For small changes I have already decided on (renames, config values, dictionary wording I specify, lookup values regenerated from my gold queries), I use Claude Code as an editor. It commits those edits itself, and each commit message names the model and lists every edit it made, for example "Claude Opus 5.5 (Claude Code) made these edits at my direction:" followed by each file and line it changed.
+
+Code in this repository is mine unless a file header says otherwise; any code whose logic an AI chose is labeled in its file header.
