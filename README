@@ -9,11 +9,12 @@ A reproducible evaluation harness that scores a deliberately simple, hand-coded 
 
 The system: one hand-coded agent with a tool loop on the raw API, and a single-turn baseline that cannot ask as the control. No orchestration, no framework, no UI, no fine-tuning.
 
-## Status (as of Oct 25, 2026)
 
-Done: environment (Postgres in Docker Compose, self-seeding synthetic database, read-only `agent_reader` role); baseline run on five requests with JSONL logs; data dictionary v1 with five labeled ambiguity dimensions; eval set v1 (30 tasks, labeled ask / answer / abstain); second-rater pass on 15 tasks; agent v1 running end to end on the five baseline requests with trajectory logs.
+## Status (as of Nov 7, 2026)
 
-Next: gold SQL and the methodology write-up, then harness v1.
+Done: environment; baseline; data dictionary v2 (five ambiguity dimensions, defaults, published-figure keys); eval set v1 frozen Nov 7 (30 tasks; gold SQL for all 25 ask/answer tasks, with scripted replies and reading notes on every ask task); second-rater pass on 15 tasks; agent v1 end to end on the five baseline requests; `validation_lookup.csv` populated for every aggregate task.
+
+Next: baseline rerun under dictionary v2, prompt v2, then harness v1 in Inspect.
 
 ## Where things are
 
@@ -22,6 +23,7 @@ Next: gold SQL and the methodology write-up, then harness v1.
 - `baseline.py` — the single-turn control.
 - `agent_v1.py` — the agent: five tools, system prompt in `system_prompt.txt`, flow in `docs/agent_v1_flowchart.md`.
 - `data_dictionary_v0.txt` / `data_dictionary_v1.txt` — the dictionary versions the baseline and agent read.
+- `data_dictionary_v2.txt` — the dictionary both scripts read. `v0` and `v1` are kept for provenance (v0 was the baseline's original, v1 the agent's during development); no reported run uses them.
 - `validation_lookup.csv` — published figures the agent checks aggregates against.
 - `logs/` — JSONL records, one per run (`baseline_runs.jsonl`, `agent_runs.jsonl`).
 - Both scripts need a `.env` with the database connection values and an OpenRouter API key (not in the repo).

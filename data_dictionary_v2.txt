@@ -1,0 +1,85 @@
+Advancement Data Dictionary v_2
+Maintained By:  Data Team Analysts
+Fiscal Year: Starts July 1 of Fiscal Year -1 and ends June 30th of Fiscal Year.
+Database time range: No contribution data before start of fiscal year 2023
+Contactable: A constituent is contactable if they are living, active, have an email or address on file, and have no in-force university-wide Communication exclusion with contact_method 'All' (restriction_type Exclude or No Reconnect, department null, end_date null or on/after today). A solicitation or event exclusion alone does not make someone non-contactable; those apply per purpose. Organizations can be contactable.
+Contact Preference: Three types: communication, solicitation and events.  A do not contact , do not invite to event or do not solicit exclusion applies to department. If the department is null, the exclusion applies University-Wide.
+Sender scope: The sender of a communication decides whose exclusions apply. A university-wide communication uses university-wide exclusions (department null) even when it is addressed to one school's constituents; a department's own outreach layers that department's exclusions on top.
+Constituent: status= active individual not an organization. Use constituent entity_type (P or C)
+FY Donor: Any hard or soft credit gift, any contribution type given within a fiscal year. 
+DAF or Donor Advised Fund: These are represented as entities where constituent.primary_affiliation = 'Foundation'
+Parent: A constituent who appears in constituent_relationship with role 'Parent' on either side (person1_role or person2_role). primary_affiliation is not used to identify parents. May have other affiliations.
+Householding logic: The primary spouse is person1 in the constituent_relationship table where person1_role is Spouse. If an individual is single, they do not have an entry on this table and are considered the primary spouse. 
+Hard credit donor: the entity that provides the funds and receives a tax receipt.
+Soft credit donor: Recognizes individual(s) who made gift possible without legally owning or donating the money. Could be spouse or couple on a DAF gift.
+Pledge: A promise to pay in planned installments over time. In contribution_type as 'Pledge'.
+Pledge Payment: Payment on a pledge. In our system will be linked by the pledge_number. In contribution_type as 'Pledge Payment'.
+Matching Gift: An amount an entity has agreed to pay in response to an eligible gift from a donor. Hard credit to entity that will pay, soft credit to donor.
+Matching Gift Payment: Payment in response to matching gift, hard credit to the paying entity, soft credit to the original donor who set up the matching gift.
+Gift: contribution_type = Gift, is a straightforward gift 
+Bequest  Expectancy = Promised money from a donor to pay upon passing away. Drawn up in an agreement.
+Bequest Expectancy Payment = pay out of what was promised in Bequest Expectancy
+Commitment Fundraising Definition = Theme: what was promised. Gifts with contribution type: Pledge, Gift, Matching Gift, Bequest Expectancy. If Pledge = canceled, substitute pledge_amount_paid instead of amount.(see contribution.pledge_status) Hard credit only for university, unit, or group totals, both hard and soft credit for individual totals and amounts.
+Donor count: A donor count is a count of distinct constituents with any positive giving in the period. Donor counts include soft-credited constituents; the hard-credit-only rule applies to dollar totals, not to counts. Donors are counted as individuals unless the request says household.
+Cash Fundraising Definition = cash in hand. Gifts with contribution type Pledge Payment, Gift, Matching Gift Payment, Bequest Expectancy Payment. Hard credit only for university, unit, or group totals, both hard and soft credit for individual totals and amounts.
+Definition of gift to University = What was given to one contribution number may represent gifts to multiple designations.
+Definition of gift to Department or Unit = part of the gift that maps to the designation and related division.
+University-Wide: a division in the designation table for funds not tied to one school or unit. It is a unit like any other and rolls up into the University total. University: the comprehensive total across all divisions, including University-Wide.
+Today's date is always Sept 23, 2026
+
+Ambiguity Blocks:
+year_basis:
+Applies when a request refers to last/this year or last X years or names a year without specifying whether it is calendar or fiscal. 
+Interpretations: fiscal year (July 1-June 30; see Fiscal Year entry) | calendar year (Jan 1-Dec 31)
+Default: fiscal year
+credit_scope:
+Applies when a list of donors is asked for or a financial total without saying how credit is counted.
+Interpretations: hard credit only (legal donors; see Hard Credit entry) | hard + soft credit (includes recognized individuals, e.g. spouses, matched donors; see Soft Credit entry)
+Default: None - must ask
+counting_basis:
+Applies when: a request asks for a fundraising total, amount raised, or money brought in without naming a basis.
+Interpretations: commitment totals (see Commitment Fundraising Definition) |Cash (see Cash Fundraising Definition.)
+Default: Commitment Fundraising Definition
+contactable_scope
+ Applies when: a request asks for the contactable base, or for a list of people to contact, solicit, invite, or mail, without stating the contact purpose.
+ Interpretations: solicitation (DNS and DNC exclusions both exclude) | non-solicitation outreach (only DNC excludes)
+ Default: None - must ask
+ Channel default: when a list request names no channel, return both an email flag and a mail flag rather than asking.
+entity_scope
+ Applies when: a contactability request names no department: how many people can we email?, pull a mailing list  leaving open whose exclusions govern.
+ Interpretations: university-wide (unscoped exclusions only; see Contact Preference entry) | department-scoped (a named unit's exclusions layered on the university's exclusion)
+ Default: university-wide unless specified.
+
+Published figures:
+
+These are figures check_reference can look up using these exact keys. Key is before ':'
+Commitment_Total_FY27 : commitment fundraising, hard credit, university-wide, FY27 to date.
+Contactable_Base : contactable constituents per the Contactable entry, as of 9/23/26.
+Parent_Count : distinct constituents per the Parent entry, as of 9/23/26.
+Law_Commitment_FY23 : commitment fundraising, hard credit, School of Law, FY23.
+Law_Commitment_FY24 : commitment fundraising, hard credit, School of Law, FY24.
+Law_Commitment_FY25 : commitment fundraising, hard credit, School of Law, FY25.
+Law_Commitment_FY26 : commitment fundraising, hard credit, School of Law, FY26.
+Engineering_Cash_AllTime : cash fundraising, hard credit, School of Engineering, all time (FY23 through 9/23/26).
+Donors_CY2026_Athletics : distinct donors, any credit, Athletics, calendar 2026 through 9/23/26.
+Donors_CY2026_College_of_Arts_and_Sciences : distinct donors, any credit, College of Arts and Sciences, calendar 2026 through 9/23/26.
+Donors_CY2026_School_of_Business : distinct donors, any credit, School of Business, calendar 2026 through 9/23/26.
+Donors_CY2026_School_of_Education : distinct donors, any credit, School of Education, calendar 2026 through 9/23/26.
+Donors_CY2026_School_of_Engineering : distinct donors, any credit, School of Engineering, calendar 2026 through 9/23/26.
+Donors_CY2026_School_of_Law : distinct donors, any credit, School of Law, calendar 2026 through 9/23/26.
+Donors_CY2026_School_of_Nursing : distinct donors, any credit, School of Nursing, calendar 2026 through 9/23/26.
+Donors_CY2026_Student_Affairs : distinct donors, any credit, Student Affairs, calendar 2026 through 9/23/26.
+Donors_CY2026_University_Libraries : distinct donors, any credit, University Libraries, calendar 2026 through 9/23/26.
+Donors_CY2026_University-Wide : distinct donors, any credit, University-Wide division designations (not the university total), calendar 2026 through 9/23/26.
+Donors_CY2026_University : distinct donors, any credit, all divisions combined, the comprehensive University total, calendar 2026 through 9/23/26.
+Open_Pledge_Count : number of open pledges (contribution_type Pledge, pledge_status Open), as of 9/23/26.
+
+End User Routing Rules:
+
+Analytics_Director : Default
+
+Fundraising_Analyst : Fundraising Numbers
+
+Communication_Analyst : Communication Related Values 
+
+Registrar_Representative : Student Data 

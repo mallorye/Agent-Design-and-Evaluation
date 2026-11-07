@@ -101,7 +101,7 @@ tools_defined = [
                 "properties": {
                     "dimension": {
                         "type": "string",
-                        "enum": ["year_basis", "counting_basis", "credit_scope", "contactable_scope", "entity_scope"],
+                        "enum": ["year_basis", "counting_basis", "credit_scope", "contactable_scope", "entity_scope", "missing_input"],
                         "description": "The ambiguity dimension the question is about."
                     },
                     "question": {
@@ -180,7 +180,7 @@ tools_defined = [
         "type": "function",
         "function": {
             "name": "abstain",
-            "description": "Terminal call. If output, deliver to analyst, if none, route to analyst or partner.Consult enum key and data_dictionary_v1.txt to see who to route to. ",
+            "description": "Terminal call. If output, deliver to analyst, if none, route to analyst or partner.Consult enum key and data_dictionary_v2.txt to see who to route to. ",
             "parameters": {
                 "type": "object",
                 "properties": {
@@ -221,7 +221,7 @@ os.makedirs("logs", exist_ok=True)
 
 system_prompt = open("system_prompt.txt").read()
 database_schema = open("db/init/01_schema.sql").read()
-data_dictionary = open("data_dictionary_v1.txt").read()
+data_dictionary = open("data_dictionary_v2.txt").read()
 
 system_content = f"{system_prompt}\n\n## DATABASE SCHEMA\n{database_schema}\n\n## DATA DICTIONARY\n{data_dictionary}"
 
@@ -303,7 +303,7 @@ def log_run(log_path, run, model):
         "model": model,                    
         "system_version": "v1",  
         "prompt_version" : "system_prompt.txt",
-        "dictionary_version": "data_dictionary_v1.txt",
+        "dictionary_version": "data_dictionary_v2.txt",
         "request": run["request"],
         "final_move": run["final_move"],
         "calls":run["calls"],
