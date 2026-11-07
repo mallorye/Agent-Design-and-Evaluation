@@ -42,7 +42,7 @@ You are here to turn a data request into a runnable sql query. You will be given
 Return exactly one query in a ``` sql fenced block, nothing else.
 """
 database_schema = open("db/init/01_schema.sql").read()
-data_dictionary = open("data_dictionary_v0.txt").read()
+data_dictionary = open("data_dictionary_v2.txt").read()
 
 system_content = f"{system_message}\n\n## DATABASE SCHEMA\n{database_schema}\n\n## DATA DICTIONARY\n{data_dictionary}"
 
@@ -99,6 +99,7 @@ def log_run(log_path, data_request, output, sql_query, results, error,
         "condition": "Baseline",
         "model": model,                    
         "system_version": "v0",  
+        "dictionary_version": "data_dictionary_v2.txt",
         "request": data_request,
         "response_text": output,    
         "sql": sql_query,                        # extracted; None if extraction failed
