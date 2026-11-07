@@ -8,7 +8,7 @@
 
 /*--------------------------------------------------------------------------/
   1 - Please provide a list of parents who gave $1000 total or more in the last two complete years.
-  ASK | counting_basis | type: list
+  ASK | credit_scope | type: list
   reply: Commitment, hard or soft credit
   reading:  Not a householded list so both parents should show up
   ------------------------------------------------------------------------*/
@@ -36,7 +36,7 @@ inner join last_two_years_1000 t on t.constituent_id = p.person1_id;
 
 /*--------------------------------------------------------------------------/
   2 - Give me the top five donors of all time.
-  ASK | counting_basis | type: list
+  ASK | credit_scope | type: list
   reply: Use commitment giving, hard and soft credit 
   reading: since database only goes back to 2023, that is 'all time'. Soft and hard credit rolls into individual total calc. Assume any entity type unless specified directly.
   ------------------------------------------------------------------------*/
@@ -727,7 +727,7 @@ select count(distinct p.Id) from parents p;
 /*--------------------------------------------------------------------------/
   B3 - Can you get me a household list of donors to the School of Business who
        have given a lifetime amount of $500 or over?
-  ASK | counting_basis | type: list
+  ASK | credit_scope | type: list
   reply: Commitment hard or soft credit
   reading: household = primary spouse's credit; "$500 or over" >= 500
   ------------------------------------------------------------------------*/
