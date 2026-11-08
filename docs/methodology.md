@@ -27,8 +27,8 @@ Outline assembled by Claude Opus 5.5 from Mallory's decisions and project files.
 - Each ask task has its gold dimension(s), one scripted reply per dimension, and a reading line (the clarified spec). B3 has two dimensions.
 - Second rater, first pass: 15 tasks, 6/15 agreement (κ ≈ 0.1). Disagreements sorted into guide gaps, task wording, and misreads. Second pass pending, using the rater copy.
 - Pre-freeze changes (one paragraph in the paper):
-  - Wording: 1, 4, 9, 17, 24, B3, B5.
-  - Labels: 1 and 2 → credit_scope; B3 → credit_scope + contactable_scope (purpose removed from the request); 14 → abstain with output.
+  - Wording: 1, 4, 9, 16, 17, 24, B3, B5. Task 16 gained a stated use (year-end receipting) so the fiscal default visibly doesn't fit.
+  - Labels: 1 and 2 → credit_scope; 23 → missing_input; B3 → credit_scope + contactable_scope (purpose removed from the request); 14 → abstain with output.
   - Log: `claude/gold_sql_change_log.md` (project).
 
 ## 4. Conditions
@@ -54,7 +54,7 @@ Outline assembled by Claude Opus 5.5 from Mallory's decisions and project files.
 - Abstain: has_output checked. The route is not scored.
 - Explanation tasks (10, 25): checklist.
 - Repetitions: k = 5; pass@1 and pass^5; oracle-clarification condition. Harness in Inspect.
-- Judgment tasks reported separately (proposed: B3, 9, 16, B4).
+- Judgment tasks reported separately (proposed: B3, 9, 16, B4). 9 and 16 both test a stated use that the default doesn't serve.
 - Trajectories (what the agent checked, in what order, how many queries, what it caught) are described, not scored.
 
 ## 7. Judge protocol
@@ -70,8 +70,6 @@ Outline assembled by Claude Opus 5.5 from Mallory's decisions and project files.
 - Abstain is a small, label-only category.
 
 ## 9. Open before the full run
-- Task 16: year_basis has a default, so neither ask guideline reaches the gold ask. Possible path: its published figures are calendar 2026.
-- Task 23: labeled counting_basis, which has a default; the open question is what "notable" means.
 - Prompt v2: task 15 (donor audit) isn't covered by the abstain guideline.
 - `agent_v1.py` line 305 logs `prompt_version` as `system_prompt.txt` for v2 runs.
 - Simulator and scorers not built yet.

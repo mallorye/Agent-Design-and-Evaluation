@@ -68,9 +68,9 @@ Rater copy without labels: `eval_set_v1_rater.md`.
 
 `ABSTAIN | not the agent's request to take; route to the relationship owner`
 
-**16.** Count the total number of donors for each unit, and then across the university, for the year.
+**16.** Count the total number of donors for each unit, and then across the university, for the year for end of year receipting purposes.
 
-`ASK | year_basis | calendar vs. fiscal; published figures are calendar 2026`
+`ASK | year_basis | the stated use (year-end receipting) implies calendar, not the fiscal default; published figures are calendar 2026`
 
 **17.** A gift officer asks for a list of donors to the Presidential Scholarship Endowment for personal solicitation outreach, with email and mail
 
@@ -98,7 +98,7 @@ Rater copy without labels: `eval_set_v1_rater.md`.
 
 **23.** An event list based only on notable donors to the School of Business. The stakeholder wants email and mailing information, and total lifetime hard and/or soft credit (never both for the same gift), householded with spouse.
 
-`ASK | counting_basis | the ask is what "notable" means`
+`ASK | missing_input | the ask is what "notable" means (a threshold only the requester can give); commitment is the default and is expected`
 
 **24.** The university needs to communicate an upcoming department name change to all School of Engineering alumni who can be emailed for communication purposes.
 

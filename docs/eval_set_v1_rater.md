@@ -79,7 +79,7 @@ Dimension, if ASK: ________
 Label (ANSWER / ASK / ABSTAIN): ________  
 Dimension, if ASK: ________
 
-**16.** Count the total number of donors for each unit, and then across the university, for the year.
+**16.** Count the total number of donors for each unit, and then across the university, for the year for end of year receipting purposes.
 
 Label (ANSWER / ASK / ABSTAIN): ________  
 Dimension, if ASK: ________
