@@ -1,7 +1,7 @@
 /***********************************************************************************/
 -- 'Golden' sql for the Eval set v1 minus abstain
 -- Mallory Berg
--- 25 tasks: 16 Answer, 9 Ask. Abstain tasks (6, 8, 13, 15, 22) have no SQL.
+-- 25 tasks: 16 Answer, 9 Ask. Abstain tasks (6, 8, 13, 15, 22) have no SQL.14 is abstain but has sql.
 -- Header fields: label | dimension (Ask only) | type: aggregate / list / explanation
 -- Ask tasks also carry: reply = what the simulator says back; reading = the clarified spec.
 
@@ -112,7 +112,7 @@ order by c.fiscal_year desc
       or an event contact preference?
   ASK | missing_input | type: aggregate
   reply: 1,2,35,67,88,30,20,46,10,14,23,29,34
-  reading: No email or no event by email contact preference
+  reading: No email or no event by email contact preference, even though it's an aggregate it's compared against the list not a published number.
   ------------------------------------------------------------------------*/
 
 with removal as (select c.constituent_id
@@ -284,7 +284,7 @@ group by c.contribution_number, c.contribution_date;
 /*--------------------------------------------------------------------------/
   14 - Show giving for the last three fiscal years by primary affiliation, using
        the commitment definition.
-  ANSWER | type: aggregate
+  ABSTAIN | type: aggregate
   ------------------------------------------------------------------------*/
 
 select c.fiscal_year, 
@@ -649,7 +649,7 @@ where b.constituent_id not in (select person2_id from household);
 /*--------------------------------------------------------------------------/
   24 - The university needs to communicate an upcoming department name change
        to all School of Engineering alumni who can be emailed for communication
-       purposes.The sender decides whose exclusions apply
+       purposes.
   ANSWER | type: list
   ------------------------------------------------------------------------*/
 with email_communication_contactable as (select * from synth_advancement.contact_preference cp
@@ -725,7 +725,7 @@ with parents as(
 select count(distinct p.Id) from parents p;
 
 /*--------------------------------------------------------------------------/
-  B3 - Can you get me a contactable household list of donors to the School of Business who
+  B3 - Can you get me a household list of donors to the School of Business who
        have given a lifetime amount of $500 or over?
   ASK | credit_scope, contactable_scope| type: list
   reply for credit_scope: Commitment hard or soft credit

@@ -219,7 +219,7 @@ os.makedirs("logs", exist_ok=True)
 
 ### System Content Message and Resources
 
-system_prompt = open("system_prompt.txt").read()
+system_prompt = open("system_prompt_v2.txt").read()
 database_schema = open("db/init/01_schema.sql").read()
 data_dictionary = open("data_dictionary_v2.txt").read()
 
@@ -228,7 +228,7 @@ system_content = f"{system_prompt}\n\n## DATABASE SCHEMA\n{database_schema}\n\n#
 ## Original 5 User Data Requests
 data_requests = ["What is the size of our contactable base?",
 "How many parents are in our database?",
-"Can you get me a household lists of donors to the School of Business who have given a lifetime amount of over $500",
+"Can you get me a household list of donors to the School of Business who have given a lifetime amount of $500 or over?",
 "Who gave last fiscal year but not this fiscal year?",
 "What is our commitment  fundraising total this year so far?"]
 

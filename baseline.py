@@ -49,7 +49,7 @@ system_content = f"{system_message}\n\n## DATABASE SCHEMA\n{database_schema}\n\n
 ## User Data Request
 data_requests = ["What is the size of our contactable base?",
 "How many parents are in our database?",
-"Can you get me a household lists of donors to the School of Business who have given a lifetime amount of over $500",
+"Can you get me a household list of donors to the School of Business who have given a lifetime amount of $500 or over?",
 "Who gave last fiscal year but not this fiscal year?",
 "What is our commitment  fundraising total this year so far?"]
 

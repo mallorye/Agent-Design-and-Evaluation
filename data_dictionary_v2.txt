@@ -42,7 +42,7 @@ Interpretations: commitment totals (see Commitment Fundraising Definition) |Cash
 Default: Commitment Fundraising Definition
 contactable_scope
  Applies when: a request asks for the contactable base, or for a list of people to contact, solicit, invite, or mail, without stating the contact purpose.
- Interpretations: solicitation (DNS and DNC exclusions both exclude) | non-solicitation outreach (only DNC excludes)
+ Interpretations: solicitation (only DNS exclude) | non-solicitation outreach (only DNC excludes)
  Default: None - must ask
  Channel default: when a list request names no channel, return both an email flag and a mail flag rather than asking.
 entity_scope
