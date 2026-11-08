@@ -41,7 +41,7 @@ Outline assembled by Claude Opus 5.5 from Mallory's decisions and project files.
 - Decision guidelines in v2:
   - Ask when a dimension the request leaves open has no default; when a request reads like a contact list but states no purpose; or when a stated use doesn't fit the default.
   - Aggregates are checked against a published figure. With no figure and no source of truth to check against, abstain with output and route to an analyst.
-  - Abstain when a request is outside the data or the office.
+  - Abstain when a request is outside the data or the office, or when it is something a person has to take responsibility for (an audit or correction of a donor's record, figures for external surveys or rankings). Task 15 is an abstain without output: producing the audit is the analyst's job.
 
 ## 5. Simulator
 - Scripted replies keyed on (task, dimension), with a fallback for any other dimension.
@@ -70,6 +70,5 @@ Outline assembled by Claude Opus 5.5 from Mallory's decisions and project files.
 - Abstain is a small, label-only category.
 
 ## 9. Open before the full run
-- Prompt v2: task 15 (donor audit) isn't covered by the abstain guideline.
-- `agent_v1.py` line 305 logs `prompt_version` as `system_prompt.txt` for v2 runs.
+- The first v2 run (B1, 2026-11-08 05:01 UTC) is logged with prompt_version `system_prompt.txt`; it was v2. Later runs log `system_prompt_v2.txt`.
 - Simulator and scorers not built yet.
