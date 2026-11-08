@@ -725,11 +725,12 @@ with parents as(
 select count(distinct p.Id) from parents p;
 
 /*--------------------------------------------------------------------------/
-  B3 - Can you get me a household list of donors to the School of Business who
+  B3 - Can you get me a contactable household list of donors to the School of Business who
        have given a lifetime amount of $500 or over?
-  ASK | credit_scope | type: list
-  reply: Commitment hard or soft credit
-  reading: household = primary spouse's credit; "$500 or over" >= 500
+  ASK | credit_scope, contactable_scope| type: list
+  reply for credit_scope: Commitment hard or soft credit
+  reply for contactable_scope: solicitation list
+  reading: household = primary spouse's credit; "$500 or over" >= 500, School of Business is sending
   ------------------------------------------------------------------------*/
 with household as 
 (select distinct person1_id, person2_id 
@@ -750,16 +751,21 @@ school_of_business as (
   having sum(case when c.contribution_type = 'Pledge' and c.pledge_status = 'Canceled' then c.pledge_amount_paid else c.amount END) >= 500
 ),
 
+no_email_solicit as (select c.constituent_id
+from synth_advancement.contact_preference c 
+where c.restriction_type = 'Exclude'
+and c.preference_type = 'Solicitations'
+and (department = 'School of Business' or department is null)
+and c.contact_method in ('All','Email')
+and (c.end_date is null or c.end_date >= '2026-09-23')),
 
-email_event_contactable as (select * from synth_advancement.contact_preference cp
- where restriction_type = 'Exclude' and preference_type = 'Event Invitations' and department is null
- and (contact_method = 'Email' or contact_method = 'All')
- and (end_date is null or end_date >= '2026-09-23')),
-
-mail_event_contactable as (select * from synth_advancement.contact_preference
-where restriction_type = 'Exclude' and preference_type = 'Event Invitations' and department is null
-and (contact_method = 'Letter' or contact_method = 'All')
-and (end_date is null or end_date >= '2026-09-23'))
+no_mail_solicit as (select c.constituent_id
+from synth_advancement.contact_preference c 
+where c.restriction_type = 'Exclude'
+and c.preference_type = 'Solicitations'
+and (department = 'School of Business' or department is null)
+and c.contact_method in ('All','Letter')
+and (c.end_date is null or c.end_date >= '2026-09-23'))
 
 select 
  b.constituent_id,
@@ -774,18 +780,18 @@ select
  c.address_state,
  c.address_postal_code,
  c.email,
- case when ec.constituent_id is null then 'Yes' else 'No' end as "Email Invitable",
- case when em.constituent_id is null then 'Yes' else 'No' end  as "Mail Invitable",
- b."Total Amount" as "Lifetime Giving to School of Business"
+ b."Total Amount" as "Lifetime Giving to School of Business",
+ case when ne.constituent_id is null then 'Yes' else 'No' END as SolicitableByEmail,
+ case when nm.constituent_id is null then 'Yes' else 'No' END as SolicitableByMail
 
 from school_of_business b 
 inner join synth_advancement.Constituent c on b.constituent_id = c.constituent_id
 left join household h on b.constituent_id = h.person1_id
-left join email_event_contactable ec on b.constituent_id = ec.constituent_id
-left join mail_event_contactable em on b.constituent_id = em.constituent_id
 left join synth_advancement.constituent spouse on h.person2_id = spouse.constituent_id
-
-where b.constituent_id not in (select person2_id from household);
+left join no_email_solicit ne on ne.constituent_id = b.constituent_id
+left join no_mail_solicit nm on nm.constituent_id = b.constituent_id
+where b.constituent_id not in (select person2_id from household)
+and not c.is_deceased; 
 
 
 /*--------------------------------------------------------------------------/
