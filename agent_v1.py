@@ -302,7 +302,7 @@ def log_run(log_path, run, model):
         "condition": "Agent",
         "model": model,                    
         "system_version": "v1",  
-        "prompt_version" : "system_prompt.txt",
+        "prompt_version" : "system_prompt_v2.txt",
         "dictionary_version": "data_dictionary_v2.txt",
         "request": run["request"],
         "final_move": run["final_move"],

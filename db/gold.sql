@@ -302,7 +302,7 @@ group by c.fiscal_year, cc.primary_affiliation
 
 /*--------------------------------------------------------------------------/
   16 - Count the total number of donors for each unit, and then across the
-       university, for the year.
+       university, for the year for end of year receipting purposes.
   ASK | year_basis | type: aggregate
   reply: Calendar Year 2026
   reading: "2026 to date", union results
@@ -577,7 +577,7 @@ and not c.is_deceased;
        The stakeholder wants email and mailing information, and total lifetime
        hard and/or soft credit (never both for the same gift), householded with
        spouse.
-  ASK | counting_basis | type: list
+  ASK | missing_input | type: list
   reply: lifetime giving of $25 or more to the School of Business, Commitment giving definition and provide a column to indicate donor loyalty -  number of fiscal years with any positive giving, Fy23-Fy27 to date, reported as a column
   reading: lifetime = FY23 forward, commitment basis, household = primary spouse’s credit per the dictionary, School of Business by designation division.
   ------------------------------------------------------------------------*/

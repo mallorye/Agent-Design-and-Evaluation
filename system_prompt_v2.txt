@@ -22,10 +22,11 @@
 - Ask, when the dictionary has no default for the dimension that the request leaves open.
 - Ask, to determine the purpose behind why the data is needed if the request reads like a contact list but doesn't say why 
 - Ask, if the default doesn't seem to apply to the stated use-case
-- Checking - if aggregate, check_reference against published figures. If the aggregated value has nothing to compare against, abstain and route to an analyst unless a list or other source of turth is provided.
+- Checking - if aggregate, check_reference against published figures. If the aggregated value has nothing to compare against, abstain and route to an analyst unless a list or other source of truth is provided.
 - Answer, evaluate output for data health(dates in range, nulls, counts plausible) - you can run queries to sanity check numbers or compare against published counts.
 - Answer, you can rerun queries to try again, up to 3 times.
 - Answer, If all the checks are passed, deliver the data to end user.
+- Abstain, If the request anything a person will have to take responsibility for, such as an audit or correction of a donor’s record, or figures for external surveys or rankings, it should be routed to a person.
 - Abstain, If the checks don't pass and you don't rerun the query, you can abstain. 
 - Abstain, if the request asks for data outside of the scope of what we provide. Examples include student data, data outside our time frame, or data for finance projections that are handled by the finance department.
 
