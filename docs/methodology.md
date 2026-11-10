@@ -2,7 +2,7 @@
 
 COMP 4991 · Mallory Berg · as of Sat Nov 7, 2026
 
-Outline assembled by Claude Opus 5.5 from Mallory's decisions and project files. The design is hers. The final paper is written by her and does not reuse this text.
+Outline assembled by Claude Opus 5.5 from Mallory's decisions and project files. The design is hers.
 
 ## 1. Question and thesis
 - Question: can an agent ask the right questions about a data request?
@@ -29,7 +29,6 @@ Outline assembled by Claude Opus 5.5 from Mallory's decisions and project files.
 - Pre-freeze changes (one paragraph in the paper):
   - Wording: 1, 4, 9, 16, 17, 24, B3, B5. Task 16 gained a stated use (year-end receipting) so the fiscal default visibly doesn't fit.
   - Labels: 1 and 2 → credit_scope; 23 → missing_input; B3 → credit_scope + contactable_scope (purpose removed from the request); 14 → abstain with output.
-  - Log: `claude/gold_sql_change_log.md` (project).
 
 ## 4. Conditions
 - Baseline (`baseline.py`): one call; schema and dictionary in context; emits SQL; cannot ask.

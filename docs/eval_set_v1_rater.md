@@ -1,7 +1,17 @@
 # Eval set v1: rater copy
 
-Label each request ANSWER, ASK, or ABSTAIN. For ASK, name the dimension.
+For each request, choose one of the following labels. 
+ANSWER: the agent could answer this with just the data dictionary and schema. ASK: the agent should ask a follow-up question first. 
+ABSTAIN: this should be passed to a human. 
+ASK: name what the follow-up question is about, using one of these: 
+year_basis: fiscal or calendar year
+credit_scope: hard or soft credit
+counting_basis: commitments or cash
+contactable_scope: solicitation or other outreach
+entity_scope: university-wide or department
+missing_input: missing ID or list
 
+Use only the data dictionary and schema.
 ## Tasks
 
 **1.** Please provide a list of parents who gave $1000 total or more in the last two complete years.
