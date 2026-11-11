@@ -1,0 +1,5 @@
+inspect-ai
+openai
+python-dotenv
+pandas
+psycopg[binary]==3.3.6
