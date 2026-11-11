@@ -41,13 +41,13 @@ os.makedirs("logs", exist_ok=True)
 
 
 
-def ask_user(dimension, question):
+def ask_user(dimension, question, answers):
     """
-    Allows you to ask a user question about a pre-defined dimension and get an answer back.
+    Returns answer written per dimension
     """
     print(f'Dimension: {dimension}')
     print(f'Question: {question}')
-    return(input())
+    return(answers.get(dimension,"I'm unable to determine the answer to that."))
 
 def check_reference(metric, value):
     """
@@ -250,14 +250,11 @@ def call_model(messages,model):
     return output
     
 
-
-
-
-
-def run_task(request):
+def run_task(request,replies):
     """
     Building each request out fresh.
     """
+    
     messages = [{"role": "system", "content": system_content},
                 {"role": "user", "content": request}]
     asks = 0
@@ -277,7 +274,10 @@ def run_task(request):
         for call in reply.tool_calls:
             name = call.function.name
             args = json.loads(call.function.arguments)
-            result = dispatcher_dictionary[call.function.name](**args)
+            if call.function.name == "ask_user":
+                result = dispatcher_dictionary[call.function.name](**args,answers = replies)
+            else:
+                result = dispatcher_dictionary[call.function.name](**args) 
             messages.append({
                 "role" : "tool",
                 "tool_call_id": call.id,
@@ -313,8 +313,19 @@ def log_run(log_path, run, model):
     with open(log_path, "a") as f:
         f.write(json.dumps(record, default=str) + "\n") 
 
-for x in data_requests:
+
+
+
+if __name__ == "__main__":
+
+    rows = []
+    with open("tasks.jsonl") as f:
+         for line in f:
+              rows.append(json.loads(line))
+    #keeping asks limited for now- will remove later for full run
+    for row in rows[:1]:
+         print(row["request"],row["replies"])
+         out = run_task(row["request"],row["replies"])
+         log_run("logs/agent_runs.jsonl",out,model)
+
    
-   out = run_task(x)
-   log_run("logs/agent_runs.jsonl",out,model)
-   break #TO-DO- remove break. Put here temporariliy to just run one question.
