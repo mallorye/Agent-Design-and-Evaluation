@@ -56,7 +56,8 @@ def decision_scorer():
 @task
 def agent_eval():
     return Task(
-        dataset=json_dataset("tasks.jsonl", record_to_sample)[0:1],
+        dataset=json_dataset("tasks.jsonl", record_to_sample),
         solver=agent_solver(),
         scorer=decision_scorer(),
+        epochs=5
     )
