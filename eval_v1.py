@@ -29,6 +29,7 @@ def agent_solver():
         state.store.set("final_move", out["final_move"])
         state.store.set("asks", out["asks"])
         state.store.set("calls", out["calls"])
+        state.store.set("messages", [m if isinstance(m,dict) else m.model_dump() for m in out["messages"]])
         return state
 
     return solve
