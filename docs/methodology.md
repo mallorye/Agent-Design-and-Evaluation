@@ -25,7 +25,7 @@ Outline assembled by Claude Opus 5.5 from Mallory's decisions and project files.
 - 30 tasks: 25 numbered plus B1–B5. 15 answer / 9 ask / 6 abstain. Labeled copy: `docs/eval_set_v1.md`; rater copy: `docs/eval_set_v1_rater.md`.
 - Gold SQL (`db/gold.sql`) for every answer and ask task, plus abstain task 14 (abstain with output).
 - Each ask task has its gold dimension(s), one scripted reply per dimension, and a reading line (the clarified spec). B3 has two dimensions.
-- Second rater, first pass: 15 tasks, 6/15 agreement (κ ≈ 0.1). Disagreements sorted into guide gaps, task wording, and misreads. Second pass pending, using the rater copy.
+- Second rater, first pass: 15 tasks, 6/15 agreement (κ ≈ 0.1). Disagreements sorted into guide gaps, task wording, and misreads. Second pass done Nov 10: two raters on the frozen 30 tasks. Agreement goes in the paper.
 - Pre-freeze changes (one paragraph in the paper):
   - Wording: 1, 4, 9, 16, 17, 24, B3, B5. Task 16 gained a stated use (year-end receipting) so the fiscal default visibly doesn't fit.
   - Labels: 1 and 2 → credit_scope; 23 → missing_input; B3 → credit_scope + contactable_scope (purpose removed from the request); 14 → abstain with output.
@@ -52,22 +52,19 @@ Outline assembled by Claude Opus 5.5 from Mallory's decisions and project files.
 - Result set: order- and name-insensitive compare against gold.
 - Abstain: has_output checked. The route is not scored.
 - Explanation tasks (10, 25): checklist.
-- Repetitions: k = 5; pass@1 and pass^5; oracle-clarification condition. Harness in Inspect.
+- Repetitions: k = 5; pass@1 and pass^5. Harness in Inspect.
 - Judgment tasks reported separately (proposed: B3, 9, 16, B4). 9 and 16 both test a stated use that the default doesn't serve.
 - Trajectories (what the agent checked, in what order, how many queries, what it caught) are described, not scored.
 
-## 7. Judge protocol
-- LLM judge scores question quality on three items: targets the right dimension, offers the governed options, asks a single question.
-- At least 50 hand-labeled questions; second rater on at least 15. Cohen's κ for judge vs. human and human vs. human.
-
-## 8. Limitations and known issues
+## 7. Limitations and known issues
 - The dictionary disagrees with itself on credit: credit_scope says must ask, while the commitment and cash definitions settle it.
 - Authorization (who's asking, FERPA) is out of scope. v1 assumes the requester is authorized; access control sits outside the agent.
 - Purpose before personal data is tested by one task only (B3). B4 is the no-ask control.
 - B3's result set is the same under either contact purpose, so only the dimension check shows whether the agent used the reply.
 - Do-not-contact is left for the requester to filter on solicitation lists.
 - Abstain is a small, label-only category.
+- Cut Nov 12: the LLM judge with its question labels, and the oracle-clarification run.
 
-## 9. Open before the full run
+## 8. Open before the full run
 - The first v2 run (B1, 2026-11-08 05:01 UTC) is logged with prompt_version `system_prompt.txt`; it was v2. Later runs log `system_prompt_v2.txt`.
 - Simulator and scorers not built yet.
