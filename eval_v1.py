@@ -5,7 +5,7 @@
 
 from inspect_ai import Task, task
 from inspect_ai.dataset import Sample, json_dataset
-from inspect_ai.scorer import CORRECT, INCORRECT, Score, Target, accuracy, scorer
+from inspect_ai.scorer import CORRECT, INCORRECT, Score, Target, accuracy, scorer,Scorer
 from inspect_ai.solver import Generate, TaskState, solver
 
 from agent_v1 import run_task
@@ -36,8 +36,8 @@ def agent_solver():
 
 # 3. Scorer: scores ask/answer/abstain against the tasks.json log
 @scorer(metrics=[accuracy()])
-def decision_scorer():
-    async def score(state: TaskState, target: Target):
+def decision_scorer() -> Scorer:
+    async def score(state: TaskState, target: Target) -> Score:
         final_move = state.store.get("final_move")
         asks = state.store.get("asks")
         if final_move == "abstain":
