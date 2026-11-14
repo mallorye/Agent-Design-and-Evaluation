@@ -275,6 +275,7 @@ def run_task(request,replies):
             name = call.function.name
             args = json.loads(call.function.arguments)
             if call.function.name == "ask_user":
+                asks += 1
                 result = dispatcher_dictionary[call.function.name](**args,answers = replies)
             else:
                 result = dispatcher_dictionary[call.function.name](**args) 
@@ -283,14 +284,12 @@ def run_task(request,replies):
                 "tool_call_id": call.id,
                 "content": json.dumps(result, default=str)
             })
-        if name == "ask_user":
-                asks += 1
 
         if name in ("submit_answer", "abstain"):
                 final_move = name
                 break
 
-        if asks >3 or calls > 30:
+        if asks >3 or calls > 29:
                 final_move = "Cap"
                 break
 
