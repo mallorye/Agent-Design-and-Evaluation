@@ -1,0 +1,151 @@
+request,repeat,your_label,kind,final_move,verdict,detail,gold_rows,agent_rows
+1,1,ask,list,submit_answer,match,"same 18 IDs (gold column constituent_id, agent column constituent_id)",18,18
+1,2,ask,list,submit_answer,match,"same 18 IDs (gold column constituent_id, agent column constituent_id)",18,18
+1,3,ask,list,submit_answer,match,"same 18 IDs (gold column constituent_id, agent column constituent_id)",18,18
+1,4,ask,list,submit_answer,match,"same 18 IDs (gold column constituent_id, agent column constituent_id)",18,18
+1,5,ask,list,submit_answer,match,"same 18 IDs (gold column constituent_id, agent column constituent_id)",18,18
+2,1,ask,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+2,2,ask,list,submit_answer,match,"same 5 IDs (gold column constituent_id, agent column constituent_id)",5,5
+2,3,ask,list,submit_answer,match,"same 5 IDs (gold column constituent_id, agent column constituent_id)",5,5
+2,4,ask,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+2,5,ask,list,submit_answer,match,"same 5 IDs (gold column constituent_id, agent column constituent_id)",5,5
+3,1,answer,list,submit_answer,match,"same 6 IDs (gold column constituent_id, agent column constituent_id)",6,6
+3,2,answer,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+3,3,answer,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+3,4,answer,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+3,5,answer,list,submit_answer,match,"same 6 IDs (gold column constituent_id, agent column constituent_id)",6,6
+4,1,answer,aggregate,submit_answer,match,"4 of 4 group numbers found in the agent's result (gold 4 rows, agent 4 rows)",4,4
+4,2,answer,aggregate,submit_answer,match,"4 of 4 group numbers found in the agent's result (gold 4 rows, agent 4 rows)",4,4
+4,3,answer,aggregate,submit_answer,match,"4 of 4 group numbers found in the agent's result (gold 4 rows, agent 4 rows)",4,4
+4,4,answer,aggregate,submit_answer,match,"4 of 4 group numbers found in the agent's result (gold 4 rows, agent 4 rows)",4,4
+4,5,answer,aggregate,submit_answer,match,"4 of 4 group numbers found in the agent's result (gold 4 rows, agent 4 rows)",4,4
+5,1,ask,aggregate,submit_answer,match,gold count = 4; found in the agent's row (4),1,1
+5,2,ask,aggregate,submit_answer,match,gold count = 4; found in the agent's row (4),1,1
+5,3,ask,aggregate,submit_answer,match,gold count = 4; found in the agent's row (4),1,1
+5,4,ask,aggregate,submit_answer,match,"gold count = 4; found in the agent's row (13, 4, 4, 0)",1,1
+5,5,ask,aggregate,submit_answer,match,"gold count = 4; found in the agent's row (4, 4, 0)",1,1
+6,1,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+6,2,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+6,3,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+6,4,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+6,5,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+7,1,answer,list,submit_answer,no match,"gold has 200 constituent_id values, the agent has 177: 23 of gold's are missing, 0 are extra",200,177
+7,2,answer,list,submit_answer,no match,"gold has 200 constituent_id values, the agent has 177: 23 of gold's are missing, 0 are extra",200,177
+7,3,answer,list,submit_answer,no match,"gold has 200 constituent_id values, the agent has 187: 13 of gold's are missing, 0 are extra",200,187
+7,4,answer,list,submit_answer,no match,"gold has 200 constituent_id values, the agent has 177: 23 of gold's are missing, 0 are extra",200,177
+7,5,answer,list,submit_answer,no match,"gold has 200 constituent_id values, the agent has 177: 23 of gold's are missing, 0 are extra",200,177
+8,1,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+8,2,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+8,3,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+8,4,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+8,5,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+9,1,ask,aggregate,submit_answer,match,gold total = 218928.88; found in the agent's row (218928.88),1,1
+9,2,ask,aggregate,submit_answer,match,"gold total = 218928.88; found in the agent's row (320, 218928.88)",1,1
+9,3,ask,aggregate,submit_answer,match,gold total = 218928.88; found in the agent's row (218928.88),1,1
+9,4,ask,aggregate,submit_answer,match,gold total = 218928.88; found in the agent's row (218928.88),1,1
+9,5,ask,aggregate,submit_answer,match,gold total = 218928.88; found in the agent's row (218928.88),1,1
+10,1,ask,explanation,submit_answer,read by Mallory,"explanation request: the gold is an explanation, not rows",,
+10,2,ask,explanation,submit_answer,read by Mallory,"explanation request: the gold is an explanation, not rows",,
+10,3,ask,explanation,submit_answer,read by Mallory,"explanation request: the gold is an explanation, not rows",,
+10,4,ask,explanation,submit_answer,read by Mallory,"explanation request: the gold is an explanation, not rows",,
+10,5,ask,explanation,submit_answer,read by Mallory,"explanation request: the gold is an explanation, not rows",,
+11,1,answer,list,submit_answer,no match,"gold has 43 constituent_id values, the agent has 40: 3 of gold's are missing, 0 are extra",43,40
+11,2,answer,list,submit_answer,no match,"gold has 43 constituent_id values, the agent has 40: 3 of gold's are missing, 0 are extra",43,40
+11,3,answer,list,submit_answer,no match,"gold has 43 constituent_id values, the agent has 40: 3 of gold's are missing, 0 are extra",43,40
+11,4,answer,list,submit_answer,no match,"gold has 43 constituent_id values, the agent has 40: 3 of gold's are missing, 0 are extra",43,40
+11,5,answer,list,submit_answer,no match,"gold has 43 constituent_id values, the agent has 40: 3 of gold's are missing, 0 are extra",43,40
+12,1,answer,list,submit_answer,match,"same 25 IDs (gold column contribution_number, agent column contribution_number)",25,25
+12,2,answer,list,submit_answer,match,"same 25 IDs (gold column contribution_number, agent column pledge_id)",25,25
+12,3,answer,list,submit_answer,match,"same 25 IDs (gold column contribution_number, agent column contribution_number)",25,25
+12,4,answer,list,submit_answer,match,"same 25 IDs (gold column contribution_number, agent column pledge_id)",25,25
+12,5,answer,list,submit_answer,match,"same 25 IDs (gold column contribution_number, agent column contribution_number)",25,25
+13,1,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+13,2,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+13,3,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+13,4,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+13,5,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+14,1,abstain,aggregate,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+14,2,abstain,aggregate,submit_answer,match,"23 of 23 group numbers found in the agent's result (gold 23 rows, agent 23 rows)",23,23
+14,3,abstain,aggregate,submit_answer,match,"23 of 23 group numbers found in the agent's result (gold 23 rows, agent 23 rows)",23,23
+14,4,abstain,aggregate,submit_answer,match,"23 of 23 group numbers found in the agent's result (gold 23 rows, agent 8 rows)",23,8
+14,5,abstain,aggregate,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+15,1,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+15,2,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+15,3,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+15,4,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+15,5,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+16,1,ask,aggregate,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+16,2,ask,aggregate,submit_answer,match,"11 of 11 group numbers found in the agent's result (gold 11 rows, agent 11 rows)",11,11
+16,3,ask,aggregate,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+16,4,ask,aggregate,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+16,5,ask,aggregate,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+17,1,answer,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+17,2,answer,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+17,3,answer,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+17,4,answer,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+17,5,answer,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+18,1,answer,list,submit_answer,no match,"gold has 107 constituent_id values, the agent has 84: 23 of gold's are missing, 0 are extra",107,84
+18,2,answer,list,submit_answer,no match,"gold has 107 constituent_id values, the agent has 96: 11 of gold's are missing, 0 are extra",107,96
+18,3,answer,list,submit_answer,no match,"gold has 107 constituent_id values, the agent has 84: 23 of gold's are missing, 0 are extra",107,84
+18,4,answer,list,submit_answer,no match,"gold has 107 constituent_id values, the agent has 84: 23 of gold's are missing, 0 are extra",107,84
+18,5,answer,list,submit_answer,no match,"gold has 107 constituent_id values, the agent has 84: 23 of gold's are missing, 0 are extra",107,84
+19,1,answer,list,submit_answer,no match,"gold has 16 constituent_id values, the agent has 17: 0 of gold's are missing, 1 are extra",16,17
+19,2,answer,list,submit_answer,no match,"gold has 16 constituent_id values, the agent has 17: 0 of gold's are missing, 1 are extra",16,17
+19,3,answer,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+19,4,answer,list,submit_answer,no match,"gold has 16 constituent_id values, the agent has 17: 0 of gold's are missing, 1 are extra",16,17
+19,5,answer,list,submit_answer,no match,"gold has 16 constituent_id values, the agent has 17: 0 of gold's are missing, 1 are extra",16,17
+20,1,answer,list,submit_answer,no match,"gold has 470 constituent_id values, the agent has 436: 34 of gold's are missing, 0 are extra",470,436
+20,2,answer,list,submit_answer,no match,"gold has 470 constituent_id values, the agent has 436: 34 of gold's are missing, 0 are extra",470,436
+20,3,answer,list,submit_answer,no match,"gold has 470 constituent_id values, the agent has 436: 34 of gold's are missing, 0 are extra",470,436
+20,4,answer,list,submit_answer,no match,"gold has 470 constituent_id values, the agent has 436: 34 of gold's are missing, 0 are extra",470,436
+20,5,answer,list,submit_answer,no match,"gold has 470 constituent_id values, the agent has 436: 34 of gold's are missing, 0 are extra",470,436
+21,1,answer,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+21,2,answer,list,submit_answer,no match,"gold has 49 constituent_id values, the agent has 12: 44 of gold's are missing, 7 are extra",49,12
+21,3,answer,list,submit_answer,no match,"gold has 49 constituent_id values, the agent has 12: 44 of gold's are missing, 7 are extra",49,12
+21,4,answer,list,submit_answer,no match,"gold has 49 constituent_id values, the agent has 11: 44 of gold's are missing, 6 are extra",49,11
+21,5,answer,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+22,1,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+22,2,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+22,3,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+22,4,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+22,5,abstain,,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+23,1,ask,list,submit_answer,review,"no column in the agent's result is named constituent_id or holds the gold IDs; agent columns: primary_constituent_id, first_name, last_name, spouse_id, spouse_first_name, spouse_last_name, email, address_line1, address_city, address_state, address_postal_code, address_country, email_flag, mail_flag, lifetime_commitment, fy_giving_years",29,17
+23,2,ask,list,abstain,not compared,"the run ended in abstain, so there is no answer to compare",,
+23,3,ask,list,submit_answer,review,"no column in the agent's result is named constituent_id or holds the gold IDs; agent columns: household_id, primary_name, spouse_name, email, mailing_address, email_flag, mail_flag, lifetime_bus_commitment, fy_count_business_fy23_27, fy_count_any_giving_fy23_27",29,28
+23,4,ask,list,submit_answer,review,"no column in the agent's result is named constituent_id or holds the gold IDs; agent columns: primary_constituent_id, name, spouse_name, email, email_flag, mailing_address, mail_flag, lifetime_commitment_total, hard_credit_portion, soft_credit_portion, fy_giving_count_fy23_fy27",29,28
+23,5,ask,list,submit_answer,review,"no column in the agent's result is named constituent_id or holds the gold IDs; agent columns: hh_id, entity_type, primary_name, primary_email, primary_mailing, primary_email_ok, primary_mail_ok, spouse_id, spouse_name, spouse_email, spouse_mailing, spouse_email_ok, spouse_mail_ok, lifetime_commitment, loyalty_fy_count, any_channel",29,28
+24,1,answer,list,submit_answer,match,"same 43 IDs (gold column constituent_id, agent column constituent_id)",43,43
+24,2,answer,list,submit_answer,match,"same 43 IDs (gold column constituent_id, agent column constituent_id)",43,43
+24,3,answer,list,submit_answer,match,"same 43 IDs (gold column constituent_id, agent column constituent_id)",43,43
+24,4,answer,list,submit_answer,match,"same 43 IDs (gold column constituent_id, agent column constituent_id)",43,43
+24,5,answer,list,submit_answer,match,"same 43 IDs (gold column constituent_id, agent column constituent_id)",43,43
+25,1,answer,explanation,submit_answer,read by Mallory,"explanation request: the gold is an explanation, not rows",,
+25,2,answer,explanation,submit_answer,read by Mallory,"explanation request: the gold is an explanation, not rows",,
+25,3,answer,explanation,submit_answer,read by Mallory,"explanation request: the gold is an explanation, not rows",,
+25,4,answer,explanation,malformed,not compared,"the run ended in malformed, so there is no answer to compare",,
+25,5,answer,explanation,malformed,not compared,"the run ended in malformed, so there is no answer to compare",,
+B1,1,ask,aggregate,submit_answer,match,gold Size of Contactable Base = 452; found in the agent's row (452),1,1
+B1,2,ask,aggregate,submit_answer,match,gold Size of Contactable Base = 452; found in the agent's row (452),1,1
+B1,3,ask,aggregate,submit_answer,match,gold Size of Contactable Base = 452; found in the agent's row (452),1,1
+B1,4,ask,aggregate,submit_answer,match,"gold Size of Contactable Base = 452; found in the agent's row (452, 414, 38)",1,1
+B1,5,ask,aggregate,submit_answer,match,gold Size of Contactable Base = 452; found in the agent's row (452),1,1
+B2,1,answer,aggregate,submit_answer,match,gold count = 52; found in the agent's row (52),1,1
+B2,2,answer,aggregate,submit_answer,match,gold count = 52; found in the agent's row (52),1,1
+B2,3,answer,aggregate,submit_answer,match,gold count = 52; found in the agent's row (52),1,1
+B2,4,answer,aggregate,submit_answer,match,gold count = 52; found in the agent's row (52),1,1
+B2,5,answer,aggregate,submit_answer,match,gold count = 52; found in the agent's row (52),1,1
+B3,1,ask,list,submit_answer,review,"no column in the agent's result is named constituent_id or holds the gold IDs; agent columns: household_id, entity_type, primary_name, total",19,20
+B3,2,ask,list,submit_answer,review,"no column in the agent's result is named constituent_id or holds the gold IDs; agent columns: household_id, primary_spouse, spouse, entity_type, primary_affiliation, is_deceased, lifetime_commitment",19,20
+B3,3,ask,list,submit_answer,review,"no column in the agent's result is named constituent_id or holds the gold IDs; agent columns: primary_constituent_id, primary_name, spouse_name, lifetime_commitment, gift_lines",19,20
+B3,4,ask,list,submit_answer,review,"no column in the agent's result is named constituent_id or holds the gold IDs; agent columns: hid, entity_type, primary_name, spouse, total",19,20
+B3,5,ask,list,submit_answer,review,"no column in the agent's result is named constituent_id or holds the gold IDs; agent columns: hh_id, entity_type, primary_name, household_members, lifetime_commitment",19,20
+B4,1,answer,list,submit_answer,match,"same 114 IDs (gold column constituent_id, agent column constituent_id)",114,114
+B4,2,answer,list,submit_answer,match,"same 114 IDs (gold column constituent_id, agent column constituent_id)",114,114
+B4,3,answer,list,submit_answer,match,"same 114 IDs (gold column constituent_id, agent column constituent_id)",114,114
+B4,4,answer,list,submit_answer,match,"same 114 IDs (gold column constituent_id, agent column constituent_id)",114,114
+B4,5,answer,list,submit_answer,match,"same 114 IDs (gold column constituent_id, agent column constituent_id)",114,114
+B5,1,answer,aggregate,submit_answer,match,gold total = 127172.47; found in the agent's row (127172.47),1,1
+B5,2,answer,aggregate,submit_answer,match,gold total = 127172.47; found in the agent's row (127172.47),1,1
+B5,3,answer,aggregate,submit_answer,match,gold total = 127172.47; found in the agent's row (127172.47),1,1
+B5,4,answer,aggregate,submit_answer,match,gold total = 127172.47; found in the agent's row (127172.47),1,1
+B5,5,answer,aggregate,submit_answer,match,gold total = 127172.47; found in the agent's row (127172.47),1,1

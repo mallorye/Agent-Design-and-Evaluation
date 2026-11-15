@@ -322,7 +322,7 @@ if __name__ == "__main__":
          for line in f:
               rows.append(json.loads(line))
     #keeping asks limited for now- will remove later for full run
-    for row in rows[:1]:
+    for row in rows: # uncomment to just test one line [:1]:
          print(row["request"],row["replies"])
          out = run_task(row["request"],row["replies"])
          log_run("logs/agent_runs.jsonl",out,model)

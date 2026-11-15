@@ -1,7 +1,7 @@
 ################################################################################################
 #### Baseline Request
-#### Feed 5 hand written request to a model with a schema and data dictionary at hand. 
-###  Handle output
+#### Feeding requests to a model with just a schema and data dictionary at hand. 
+### 
 ################################################################################################
 
 #libraries
@@ -46,7 +46,7 @@ data_dictionary = open("data_dictionary_v2.txt").read()
 
 system_content = f"{system_message}\n\n## DATABASE SCHEMA\n{database_schema}\n\n## DATA DICTIONARY\n{data_dictionary}"
 
-## User Data Request
+## User Data Request (Used in initial run)
 data_requests = ["What is the size of our contactable base?",
 "How many parents are in our database?",
 "Can you get me a household list of donors to the School of Business who have given a lifetime amount of $500 or over?",
@@ -111,16 +111,27 @@ def log_run(log_path, data_request, output, sql_query, results, error,
         f.write(json.dumps(record, default=str) + "\n")
 
 
-for data_request in data_requests:
-    output = call_model(system_content, data_request,model) 
-    sql_query = sql_output_evaluate(output)
-    if sql_query is None:
-        log_run("logs/baseline_runs.jsonl", data_request, output, None, None, "extraction failed", model)
-        continue
-    results, error = run_sql(sql_query)
-    log_run("logs/baseline_runs.jsonl",data_request,output,sql_query,results,error,model)
-    print("error")
-    print(error)
-    print("results")
-    print(results)
+if __name__ == "__main__":
+    rows = []
+    with open("tasks.jsonl") as f:
+         for line in f:
+              rows.append(json.loads(line))
 
+
+    for row in rows: #[:1]:
+        output = call_model(system_content, row["request"],model) 
+        sql_query = sql_output_evaluate(output)
+        if sql_query is None:
+            log_run("logs/baseline_runs_full.jsonl", row["request"], output, None, None, "extraction failed", model)
+            continue
+        results, error = run_sql(sql_query)
+        log_run("logs/baseline_runs_full.jsonl",row["request"],output,sql_query,results,error,model)
+        print("error")
+        print(error)
+        print("results")
+        print(results)
+
+
+
+
+      
