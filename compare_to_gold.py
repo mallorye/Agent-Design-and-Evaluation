@@ -20,6 +20,13 @@ Run from the repo root, with Docker up:
     python3 compare_to_gold.py logs/<log file>.eval
 
 Writes a CSV next to the log, named <log file>-gold-comparison.csv, with one row per run.
+
+Added 2026-11-14, also by Claude Fable 5.2 at Mallory's request: it can read the single-prompt
+baseline's log as well (the .jsonl file that baseline.py writes):
+    python3 compare_to_gold.py logs/baseline_runs_full.jsonl
+Each line is matched to its request in tasks.jsonl by the request text. If a request appears
+more than once in the file, the last line is used. The baseline's answers are compared to the
+key only. Mallory decided not to review them, so its explanation answers are not read.
 """
 import csv
 import json
@@ -189,30 +196,27 @@ def gold_result(task):
     return gold_cache[request_id]
 
 
-def compare_run(task, final_move, messages):
-    """Returns (verdict, detail, gold row count, agent row count) for one run."""
+def compare_answer(task, sql):
+    """Compare one submitted SQL to the request's gold result.
+    Returns (verdict, detail, gold row count, agent row count)."""
     kind = task.get("type")
-    if final_move != "submit_answer":
-        return "not compared", f"the run ended in {final_move}, so there is no answer to compare", "", ""
     if kind == "explanation":
         return "read by Mallory", "explanation request: the gold is an explanation, not rows", "", ""
     if not task.get("gold_sql"):
         return "not compared", "this request has no gold SQL", "", ""
-
-    sql = submitted_sql(messages)
     if not sql:
-        return "review", "no SQL found on the submit_answer call", "", ""
+        return "review", "no SQL found for this answer", "", ""
 
     gold_rows, gold_error = gold_result(task)
     if gold_error is not None:
         return "review", f"the gold SQL did not run: {gold_error.splitlines()[0]}", "", ""
     agent_rows, agent_error = run_sql(sql)
     if agent_error is not None:
-        return "no match", f"the agent's submitted SQL did not run: {agent_error.splitlines()[0]}", len(gold_rows), ""
+        return "no match", f"the submitted SQL did not run: {agent_error.splitlines()[0]}", len(gold_rows), ""
 
     if not gold_rows:
         verdict = "match" if not agent_rows else "no match"
-        return verdict, f"gold returns 0 rows; the agent's SQL returns {len(agent_rows)}", 0, len(agent_rows)
+        return verdict, f"gold returns 0 rows; the submitted SQL returns {len(agent_rows)}", 0, len(agent_rows)
     if kind == "list":
         verdict, detail = compare_list(gold_rows, agent_rows)
     elif kind == "aggregate":
@@ -222,18 +226,20 @@ def compare_run(task, final_move, messages):
     return verdict, detail, len(gold_rows), len(agent_rows)
 
 
-# ---------- the whole log ----------
+def compare_run(task, final_move, messages):
+    """One run from an Inspect log. Only runs that submitted an answer are compared."""
+    if final_move != "submit_answer":
+        return "not compared", f"the run ended in {final_move}, so there is no answer to compare", "", ""
+    return compare_answer(task, submitted_sql(messages))
 
-def main():
-    if len(sys.argv) != 2:
-        print("Usage: python3 compare_to_gold.py logs/<log file>.eval")
-        sys.exit(1)
-    log_path = Path(sys.argv[1])
-    tasks = load_tasks(TASKS_FILE)
+
+# ---------- the two kinds of log ----------
+
+def rows_from_inspect_log(log_path, tasks):
+    """One output row per run in a saved Inspect log."""
     order = list(tasks.keys())
     log = read_eval_log(str(log_path))
     samples = sorted(log.samples, key=lambda s: (order.index(str(s.id)), s.epoch))
-
     out_rows = []
     for sample in samples:
         task = tasks[str(sample.id)]
@@ -244,6 +250,70 @@ def main():
             "kind": task.get("type") or "", "final_move": final_move,
             "verdict": verdict, "detail": detail, "gold_rows": gold_n, "agent_rows": agent_n,
         })
+    return out_rows
+
+
+def same_text(text):
+    """Request text with extra spaces removed, for matching a log line to its request."""
+    return " ".join(str(text).split())
+
+
+def rows_from_baseline_log(log_path, tasks):
+    """One output row per request found in the baseline's .jsonl log (the last line for each)."""
+    by_text = {same_text(task["request"]): request_id for request_id, task in tasks.items()}
+    latest = {}
+    unknown = 0
+    with open(log_path, encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            record = json.loads(line)
+            request_id = by_text.get(same_text(record.get("request", "")))
+            if request_id is None:
+                unknown += 1
+                continue
+            latest[request_id] = record
+    if unknown:
+        print(f"Note: {unknown} line(s) in the log did not match any request text in {TASKS_FILE} and were skipped.")
+
+    out_rows = []
+    for request_id, task in tasks.items():
+        if request_id not in latest:
+            continue
+        record = latest[request_id]
+        sql = record.get("sql")
+        if task.get("type") == "explanation":
+            verdict, detail, gold_n, agent_n = ("not compared",
+                "explanation request: the baseline's answers are compared to the key only, not read", "", "")
+        elif not sql:
+            verdict, detail, gold_n, agent_n = ("no match" if task.get("gold_sql") else "not compared",
+                f"the baseline returned no usable SQL ({record.get('error') or 'no SQL'})", "", "")
+        else:
+            verdict, detail, gold_n, agent_n = compare_answer(task, sql)
+        out_rows.append({
+            "request": request_id, "repeat": 1, "your_label": task["label"],
+            "kind": task.get("type") or "", "final_move": "submit_answer",
+            "verdict": verdict, "detail": detail, "gold_rows": gold_n, "agent_rows": agent_n,
+        })
+    return out_rows
+
+
+# ---------- the whole log ----------
+
+def main():
+    if len(sys.argv) != 2:
+        print("Usage: python3 compare_to_gold.py logs/<log file>.eval")
+        print("   or: python3 compare_to_gold.py logs/<baseline log>.jsonl")
+        sys.exit(1)
+    log_path = Path(sys.argv[1])
+    tasks = load_tasks(TASKS_FILE)
+    if log_path.suffix == ".jsonl":
+        out_rows = rows_from_baseline_log(log_path, tasks)
+    else:
+        out_rows = rows_from_inspect_log(log_path, tasks)
+    if not out_rows:
+        print("Nothing to compare: no runs found in that log.")
+        sys.exit(1)
 
     out_path = log_path.with_name(log_path.stem + "-gold-comparison.csv")
     with open(out_path, "w", newline="", encoding="utf-8") as f:
