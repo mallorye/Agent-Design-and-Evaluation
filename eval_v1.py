@@ -1,5 +1,6 @@
 ###  Eval using Inspect
 ### Initial spine drafted by Claude Fable 5.2 as an example at Mallory's request (2026-11-10).
+### Customizations and updates to evaluate what I need in Agent v1 are  mine
 
 ################################################################################################
 
